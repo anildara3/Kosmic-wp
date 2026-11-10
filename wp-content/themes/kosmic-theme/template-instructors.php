@@ -52,13 +52,13 @@ $phone1_clean = preg_replace('/[^0-9+]/', '', $phone1);
                         $spot_badge = get_field('instructor_badge') ?: 'Founder & Master Choreographer';
                 ?>
                         <div class="col-lg-5 mb-4 mb-lg-0 text-center">
-                            <img src="<?php echo esc_url($spot_img); ?>" alt="<?php the_title_attribute(); ?>" style="border-radius: 20px; max-width: 100%; border: 4px solid #6B2AE6; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            <img src="<?php echo esc_url($spot_img); ?>" alt="<?php the_title_attribute(); ?>" class="founder-img" style="border-radius: 20px; max-width: 100%; border: 4px solid #6B2AE6; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                         </div>
                         <div class="col-lg-7">
-                            <span class="badge" style="background-color: #EB0029; font-size: 13px; padding: 8px 16px; margin-bottom: 15px;"><?php echo esc_html($spot_badge); ?></span>
-                            <h2 class="text-white mb-2" style="font-size: 36px; font-weight: 800;"><?php the_title(); ?></h2>
-                            <h5 style="color: #6B2AE6; font-weight: 600;" class="mb-3"><?php echo esc_html($spot_desig); ?></h5>
-                            <div class="text-white-50 lead mb-4" style="line-height: 1.8;">
+                            <span class="badge founder-badge" style="background-color: #EB0029; font-size: 13px; padding: 8px 16px; margin-bottom: 15px;"><?php echo esc_html($spot_badge); ?></span>
+                            <h2 class="text-white founder-name mb-2" style="font-size: 36px; font-weight: 800;"><?php the_title(); ?></h2>
+                            <h5 class="founder-desig mb-3" style="color: #6B2AE6; font-weight: 600;"><?php echo esc_html($spot_desig); ?></h5>
+                            <div class="text-white-50 founder-bio lead mb-4" style="line-height: 1.8;">
                                 <?php the_content(); ?>
                             </div>
                             <div class="d-flex flex-wrap gap-3 mt-4">
@@ -128,7 +128,7 @@ $phone1_clean = preg_replace('/[^0-9+]/', '', $phone1);
 <!-- Mentorship CTA Banner -->
 <div class="space-bottom bg-dark">
     <div class="container">
-        <div style="background: linear-gradient(135deg, #6B2AE6 0%, #EB0029 100%); border-radius: 20px; padding: 50px 30px; text-align: center; color: #ffffff;">
+        <div class="kosmic-gradient-cta" style="background: linear-gradient(135deg, #6B2AE6 0%, #EB0029 100%); border-radius: 20px; padding: 50px 30px; text-align: center; color: #ffffff;">
             <h2 class="text-white mb-3" style="font-size: 32px; font-weight: 800;">Want to Train Under Tollywood Master Mahesh &amp; Faculty?</h2>
             <p class="mb-4 mx-auto" style="max-width: 650px; font-size: 16px; opacity: 0.95;">Book your free trial demo class today at our Padmarao Nagar (Secunderabad) or Shivam Road (Hyderabad) studio.</p>
             <a href="<?php echo esc_url($contact_url); ?>" class="th-btn white-btn" style="color: #161921 !important; font-weight: 700; padding: 16px 36px;">Book Free Trial Demo Now</a>

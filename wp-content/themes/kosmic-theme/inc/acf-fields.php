@@ -285,6 +285,36 @@ function kosmic_register_acf_field_groups() {
         'title' => __('Gallery Item Details', 'kosmic'),
         'fields' => array(
             array(
+                'key' => 'field_gallery_media_type',
+                'label' => __('Media Format', 'kosmic'),
+                'name' => 'gallery_media_type',
+                'type' => 'radio',
+                'instructions' => __('Choose whether this item is a Photo or a Video (YouTube / Instagram Reel / Facebook).', 'kosmic'),
+                'choices' => array(
+                    'photo' => __('Photo / Image', 'kosmic'),
+                    'video' => __('Video (YouTube, Instagram Reel, Facebook)', 'kosmic'),
+                ),
+                'default_value' => 'photo',
+                'layout' => 'horizontal',
+            ),
+            array(
+                'key' => 'field_gallery_video_url',
+                'label' => __('Video URL (YouTube, Instagram, or Facebook)', 'kosmic'),
+                'name' => 'gallery_video_url',
+                'type' => 'url',
+                'instructions' => __('Paste any video URL: YouTube (watch, shorts, youtu.be), Instagram Reel/post, or Facebook video.', 'kosmic'),
+                'placeholder' => 'https://www.youtube.com/watch?v=... or https://www.instagram.com/reel/...',
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_gallery_media_type',
+                            'operator' => '==',
+                            'value' => 'video',
+                        ),
+                    ),
+                ),
+            ),
+            array(
                 'key' => 'field_gallery_tag',
                 'label' => __('Category Tag / Subtitle', 'kosmic'),
                 'name' => 'gallery_tag',
@@ -293,9 +323,10 @@ function kosmic_register_acf_field_groups() {
             ),
             array(
                 'key' => 'field_gallery_image',
-                'label' => __('Gallery Photo (or use Featured Image)', 'kosmic'),
+                'label' => __('Gallery Photo / Video Cover Poster (or use Featured Image)', 'kosmic'),
                 'name' => 'gallery_image',
                 'type' => 'image',
+                'instructions' => __('For photos, this is the main image. For videos, this serves as the preview thumbnail (for YouTube, if left empty it will automatically fetch the video thumbnail).', 'kosmic'),
                 'return_format' => 'url',
             ),
         ),

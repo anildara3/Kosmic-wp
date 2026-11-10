@@ -1500,3 +1500,275 @@ body.light-mode .widget-card-dark a.text-white {
     color: #161921 !important;
 }
 
+/* ---------------------------------------------------------
+   FOUNDER SPOTLIGHT & INSTRUCTORS FACULTY - LIGHT MODE STYLES
+   --------------------------------------------------------- */
+body.light-mode .founder-spotlight {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(107, 42, 230, 0.2) !important;
+    box-shadow: 0 10px 35px rgba(107, 42, 230, 0.08) !important;
+}
+
+body.light-mode .founder-spotlight .founder-img,
+body.light-mode .founder-spotlight img {
+    border: 4px solid #6b2ae6 !important;
+    box-shadow: 0 10px 25px rgba(107, 42, 230, 0.15) !important;
+}
+
+body.light-mode .founder-spotlight .founder-name,
+body.light-mode .founder-spotlight h2,
+body.light-mode .founder-spotlight h2.text-white {
+    color: #161921 !important;
+}
+
+body.light-mode .founder-spotlight .founder-desig,
+body.light-mode .founder-spotlight h5 {
+    color: #6b2ae6 !important;
+    font-weight: 700 !important;
+}
+
+body.light-mode .founder-spotlight .founder-bio,
+body.light-mode .founder-spotlight .founder-bio p,
+body.light-mode .founder-spotlight .lead,
+body.light-mode .founder-spotlight p,
+body.light-mode .founder-spotlight .text-white-50 {
+    color: #4a5568 !important;
+}
+
+body.light-mode .founder-spotlight .founder-badge,
+body.light-mode .founder-spotlight .badge {
+    background-color: #eb0029 !important;
+    color: #ffffff !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.blue-btn {
+    background: #6b2ae6 !important;
+    color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.blue-btn:hover {
+    background: #eb0029 !important;
+    color: #ffffff !important;
+    border-color: #eb0029 !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.white-btn {
+    background-color: #f8fafc !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.white-btn:hover {
+    background-color: #6b2ae6 !important;
+    color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+}
+
+/* Faculty Cards Grid in Light Mode */
+body.light-mode .team-card-dark {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .team-card-dark:hover {
+    border-color: #eb0029 !important;
+    box-shadow: 0 14px 30px rgba(235, 0, 41, 0.15) !important;
+}
+
+body.light-mode .team-card-dark .team-badge {
+    background: #eb0029 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(235, 0, 41, 0.3) !important;
+}
+
+body.light-mode .team-card-dark .team-card-name {
+    color: #161921 !important;
+}
+
+body.light-mode .team-card-dark .team-card-desig {
+    color: #6b2ae6 !important;
+    font-weight: 700 !important;
+}
+
+body.light-mode .team-card-dark .team-card-desc {
+    color: #64748b !important;
+}
+
+body.light-mode .team-card-dark .blue-border-btn {
+    border: 2px solid #6b2ae6 !important;
+    color: #6b2ae6 !important;
+    background: #fdfcff !important;
+    font-weight: 700 !important;
+}
+
+body.light-mode .team-card-dark .blue-border-btn:hover {
+    background: #6b2ae6 !important;
+    color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+}
+
+/* Vibrant Gradient CTA Banners across all pages (Fixes dark text on red/purple gradients) */
+body.light-mode .kosmic-gradient-cta,
+body.light-mode [style*="linear-gradient(135deg, #6B2AE6"],
+body.light-mode [style*="linear-gradient(135deg, #6b2ae6"],
+body.light-mode [style*="linear-gradient(135deg, rgb(107, 42, 230)"],
+body.light-mode .cta-banner-gradient {
+    color: #ffffff !important;
+}
+
+body.light-mode .kosmic-gradient-cta h2,
+body.light-mode .kosmic-gradient-cta .cta-title,
+body.light-mode .kosmic-gradient-cta p,
+body.light-mode .kosmic-gradient-cta .cta-desc,
+body.light-mode .kosmic-gradient-cta .text-white,
+body.light-mode [style*="linear-gradient(135deg, #6B2AE6"] h2,
+body.light-mode [style*="linear-gradient(135deg, #6B2AE6"] p,
+body.light-mode [style*="linear-gradient(135deg, #6B2AE6"] .text-white,
+body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] h2,
+body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] p,
+body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] .text-white,
+body.light-mode [style*="linear-gradient(135deg, rgb(107, 42, 230)"] h2,
+body.light-mode [style*="linear-gradient(135deg, rgb(107, 42, 230)"] p,
+body.light-mode [style*="linear-gradient(135deg, rgb(107, 42, 230)"] .text-white {
+    color: #ffffff !important;
+}
+
+body.light-mode .kosmic-gradient-cta .th-btn.white-btn,
+body.light-mode [style*="linear-gradient(135deg, #6B2AE6"] .th-btn.white-btn,
+body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] .th-btn.white-btn {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-mode .kosmic-gradient-cta .th-btn.white-btn:hover,
+body.light-mode [style*="linear-gradient(135deg, #6B2AE6"] .th-btn.white-btn:hover,
+body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] .th-btn.white-btn:hover {
+    background-color: #161921 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+/* ---------------------------------------------------------
+   GALLERY VIDEO SUPPORT (YOUTUBE, INSTAGRAM REELS, FACEBOOK)
+   --------------------------------------------------------- */
+.gallery-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-card.has-video {
+    cursor: pointer;
+}
+
+.gallery-video-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 3;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-video-badge {
+    transform: translateY(-2px);
+}
+
+.gallery-video-badge.youtube {
+    background: #ff0000 !important;
+}
+
+.gallery-video-badge.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+}
+
+.gallery-video-badge.facebook {
+    background: #1877f2 !important;
+}
+
+.gallery-video-badge.video {
+    background: #6b2ae6 !important;
+}
+
+/* Center Play Button on Video Cards */
+.gallery-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62px;
+    height: 62px;
+    background: rgba(235, 0, 41, 0.92);
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 2;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 25px rgba(235, 0, 41, 0.7);
+    padding-left: 4px;
+    text-decoration: none !important;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.gallery-play-btn:hover,
+.gallery-card:hover .gallery-play-btn {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: #eb0029;
+    box-shadow: 0 0 35px rgba(235, 0, 41, 1), 0 0 15px rgba(255, 255, 255, 0.6);
+    color: #ffffff !important;
+}
+
+.gallery-zoom-icon.popup-video {
+    background: rgba(235, 0, 41, 0.95);
+    padding-left: 3px;
+}
+
+.gallery-zoom-icon.popup-video:hover {
+    background: #6b2ae6;
+    color: #ffffff !important;
+}
+
+/* Video Modal Lightbox (YouTube, Instagram Reels, Facebook) */
+.mfp-video-popup .mfp-content {
+    max-width: 900px;
+}
+
+.mfp-video-popup .mfp-iframe-scaler {
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+}
+
+.mfp-video-popup .mfp-iframe-scaler iframe {
+    border-radius: 12px;
+    background: #000;
+}
+
+body.light-mode .gallery-card {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+

@@ -3,8 +3,58 @@
     "title": "Gallery Item Details",
     "fields": [
         {
+            "key": "field_gallery_media_type",
+            "label": "Media Format",
+            "name": "gallery_media_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Select whether this gallery item is a Photo or a Video (YouTube, Instagram Reel, Facebook).",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "photo": "Photo / Image",
+                "video": "Video (YouTube, Instagram Reel, Facebook)"
+            },
+            "default_value": "photo",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_gallery_video_url",
+            "label": "Video URL (YouTube, Instagram, or Facebook)",
+            "name": "gallery_video_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Paste any video link: YouTube video/Shorts (e.g. https://www.youtube.com/watch?v=... or https://youtu.be/...), Instagram Reel/Video (e.g. https://www.instagram.com/reel/...), or Facebook video link.",
+            "required": false,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_gallery_media_type",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://www.youtube.com/watch?v=... or https://www.instagram.com/reel/..."
+        },
+        {
             "key": "field_gallery_tag",
-            "label": "Category Tag \/ Subtitle",
+            "label": "Category Tag / Subtitle",
             "name": "gallery_tag",
             "aria-label": "",
             "type": "text",
@@ -24,11 +74,11 @@
         },
         {
             "key": "field_gallery_image",
-            "label": "Gallery Photo (or use Featured Image)",
+            "label": "Gallery Photo / Video Cover Poster (or use Featured Image)",
             "name": "gallery_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "For photos, this is the main image. For videos, this serves as the preview thumbnail (for YouTube, if left empty it will automatically fetch the video thumbnail).",
             "required": false,
             "conditional_logic": false,
             "wrapper": {
@@ -69,5 +119,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793818950
+    "modified": 1794336000
 }

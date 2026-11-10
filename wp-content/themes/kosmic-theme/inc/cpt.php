@@ -234,3 +234,122 @@ function kosmic_register_custom_post_types() {
 }
 add_action('init', 'kosmic_register_custom_post_types');
 
+/**
+ * Parse video URLs (YouTube, Instagram, Facebook) into embed parameters and thumbnails
+ *
+ * @param string $url Video URL
+ * @return array|false Parsed video details or false
+ */
+function kosmic_parse_video_url($url) {
+    if (empty($url)) {
+        return false;
+    }
+    $url = trim($url);
+
+    // 1. YouTube (watch, shorts, embed, youtu.be)
+    if (preg_match('/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/ ]{11})/i', $url, $matches)) {
+        $yt_id = $matches[1];
+        return array(
+            'platform'    => 'youtube',
+            'id'          => $yt_id,
+            'embed_url'   => 'https://www.youtube.com/embed/' . $yt_id . '?autoplay=1&rel=0',
+            'thumbnail'   => 'https://img.youtube.com/vi/' . $yt_id . '/hqdefault.jpg',
+            'icon_class'  => 'fa-brands fa-youtube',
+            'badge_label' => 'YouTube',
+        );
+    }
+
+    // 2. Instagram (Reels, Posts, TV)
+    if (preg_match('/instagram\.com\/(?:p|reel|tv)\/([a-zA-Z0-9_-]+)/i', $url, $matches)) {
+        $ig_id = $matches[1];
+        $clean_url = preg_replace('/\?.*$/', '', $url);
+        $clean_url = rtrim($clean_url, '/') . '/embed/';
+        return array(
+            'platform'    => 'instagram',
+            'id'          => $ig_id,
+            'embed_url'   => $clean_url,
+            'thumbnail'   => null,
+            'icon_class'  => 'fa-brands fa-instagram',
+            'badge_label' => 'Instagram Reel',
+        );
+    }
+
+    // 3. Facebook Video
+    if (strpos($url, 'facebook.com') !== false || strpos($url, 'fb.watch') !== false) {
+        $fb_embed = 'https://www.facebook.com/plugins/video.php?href=' . urlencode($url) . '&show_text=0&autoplay=1';
+        return array(
+            'platform'    => 'facebook',
+            'id'          => md5($url),
+            'embed_url'   => $fb_embed,
+            'thumbnail'   => null,
+            'icon_class'  => 'fa-brands fa-facebook-f',
+            'badge_label' => 'Facebook',
+        );
+    }
+
+    // 4. Fallback / Direct Video Link
+    return array(
+        'platform'    => 'video',
+        'id'          => md5($url),
+        'embed_url'   => $url,
+        'thumbnail'   => null,
+        'icon_class'  => 'fa-solid fa-play',
+        'badge_label' => 'Video',
+    );
+}
+
+/**
+ * Add custom columns to Gallery Item post list in WordPress admin
+ */
+function kosmic_gallery_item_columns($columns) {
+    $new_columns = array();
+    foreach ($columns as $key => $title) {
+        if ($key === 'title') {
+            $new_columns['gallery_thumb'] = esc_html__('Preview', 'kosmic');
+            $new_columns[$key] = $title;
+            $new_columns['gallery_format'] = esc_html__('Format', 'kosmic');
+        } else {
+            $new_columns[$key] = $title;
+        }
+    }
+    return $new_columns;
+}
+add_filter('manage_gallery_item_posts_columns', 'kosmic_gallery_item_columns');
+
+function kosmic_gallery_item_custom_column($column, $post_id) {
+    if ($column === 'gallery_thumb') {
+        $img = has_post_thumbnail($post_id) ? get_the_post_thumbnail_url($post_id, 'thumbnail') : (get_field('gallery_image', $post_id) ?: get_post_meta($post_id, 'gallery_image', true));
+        $video_url = get_field('gallery_video_url', $post_id) ?: get_post_meta($post_id, 'gallery_video_url', true);
+        if (empty($img) && !empty($video_url)) {
+            $info = kosmic_parse_video_url($video_url);
+            if (!empty($info['thumbnail'])) {
+                $img = $info['thumbnail'];
+            }
+        }
+        if (!empty($img)) {
+            echo '<img src="' . esc_url($img) . '" style="width: 55px; height: 42px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd;">';
+        } else {
+            echo '<span style="color:#999;">—</span>';
+        }
+    } elseif ($column === 'gallery_format') {
+        $video_url = get_field('gallery_video_url', $post_id) ?: get_post_meta($post_id, 'gallery_video_url', true);
+        $media_type = get_field('gallery_media_type', $post_id) ?: get_post_meta($post_id, 'gallery_media_type', true);
+        if (!empty($video_url) || $media_type === 'video') {
+            $info = !empty($video_url) ? kosmic_parse_video_url($video_url) : false;
+            $label = $info ? $info['badge_label'] : 'Video';
+            $color = '#6b2ae6';
+            if ($info && $info['platform'] === 'youtube') $color = '#ff0000';
+            if ($info && $info['platform'] === 'instagram') $color = '#e1306c';
+            if ($info && $info['platform'] === 'facebook') $color = '#1877f2';
+            echo '<span style="background: ' . esc_attr($color) . '; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; display: inline-block;">' . esc_html($label) . '</span>';
+            if (!empty($video_url)) {
+                echo '<br><a href="' . esc_url($video_url) . '" target="_blank" style="font-size: 11px; text-decoration: none;">View Link &rarr;</a>';
+            }
+        } else {
+            echo '<span style="background: #2e7d32; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; display: inline-block;">Photo</span>';
+        }
+    }
+}
+add_action('manage_gallery_item_posts_custom_column', 'kosmic_gallery_item_custom_column', 10, 2);
+
+

@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 /**
  * Define Theme Constants
  */
-define('KOSMIC_VERSION', '1.0.9');
+define('KOSMIC_VERSION', '1.1.1');
 define('KOSMIC_DIR', get_template_directory());
 define('KOSMIC_URI', get_template_directory_uri());
 
