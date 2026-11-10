@@ -1,0 +1,243 @@
+{
+    "key": "group_kosmic_service",
+    "title": "Service & Program Details",
+    "fields": [
+        {
+            "key": "field_service_number",
+            "label": "Service Number Badge",
+            "name": "service_number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. 01, 02, 03 (Display order on cards)",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "01",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_service_badge",
+            "label": "Highlight Badge",
+            "name": "service_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Signature Flagship Program, Popular, Kids Special",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Flagship Program",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_service_fee",
+            "label": "Monthly Fee",
+            "name": "service_fee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. ₹2,500 \/ month",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_service_subtitle",
+            "label": "Short Subtitle \/ Headline",
+            "name": "service_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "One-line description for the service card",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_service_icon",
+            "label": "Service Icon Graphic",
+            "name": "service_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload an icon (SVG or PNG)",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_service_batch_info",
+            "label": "Batch Timings & Schedule",
+            "name": "service_batch_info",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Mon - Fri Batches • Morning & Evening",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Mon - Fri Batches • Morning & Evening",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_service_variations",
+            "label": "Curriculum \/ Weekly Variation Breakdown",
+            "name": "service_variations",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Day-by-day or module breakdown shown on the single program page",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "toolbar": "basic",
+            "media_upload": 0,
+            "tabs": "all",
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_service_benefits",
+            "label": "Key Program Benefits (1 per line)",
+            "name": "service_benefits",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter key highlights, 1 per line (Checkmark icons added automatically)",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 5,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_service_inner_img_1",
+            "label": "Inner Gallery Photo 1",
+            "name": "service_inner_img_1",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_service_inner_img_2",
+            "label": "Inner Gallery Photo 2",
+            "name": "service_inner_img_2",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793818950
+}

@@ -1,0 +1,1502 @@
+/*
+Theme Name: Kosmic Studio 4 Danz
+Theme URI: https://kosmicstudio4danz.in/
+Author: Kosmic Studio 4 Danz
+Author URI: https://kosmicstudio4danz.in/
+Description: Custom premium responsive WordPress theme for Kosmic Studio 4 Danz - Hyderabad's best A/C dance studio & fitness academy with weight loss, Zumba, Bollywood, Kuchipudi, Gymnastics & Yoga. Directed by Tollywood Master Choreographer C. Mahesh Babu (Mahesh Maddy).
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kosmic
+Tags: dance, fitness, studio, hyderabad, custom-theme, responsive, modern, dark-mode, animated
+*/
+
+/* 
+ * Core styles are loaded from assets/css/style.css 
+ * You can also add your child styles or custom overrides below.
+ */
+
+.wp-block-button__link {
+    background-color: #6B2AE6;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 12px 28px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   KOSMIC STUDIO - COMPLETE DARK FORM & CONTACT FORM 7 STYLES
+   Ensures 100% visible white labels, rich dark inputs (#1a1f2c),
+   and branded gradient buttons across all forms and devices.
+   ========================================================================== */
+
+/* 1. Visible, crisp labels on dark backgrounds */
+body:not(.light-mode) .wpcf7 label,
+body:not(.light-mode) .wpcf7-form label,
+body:not(.light-mode) .contact-us-form label,
+body:not(.light-mode) .input-form label,
+body:not(.light-mode) #contact-sec label,
+body:not(.light-mode) .bg-dark label,
+body:not(.light-mode) .form-label,
+body:not(.light-mode) .kosmic-form-label {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+    letter-spacing: 0.3px !important;
+    opacity: 1 !important;
+    line-height: 1.4 !important;
+}
+
+/* Fix for default CF7 markup where label wraps the input */
+body:not(.light-mode) .wpcf7 form p {
+    margin-bottom: 18px !important;
+}
+
+body:not(.light-mode) .wpcf7 form p > label {
+    display: block !important;
+    width: 100% !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+}
+
+.wpcf7-form-control-wrap {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+}
+
+/* 2. Deep dark background for all input fields, textareas, selects */
+body:not(.light-mode) .wpcf7 input[type="text"],
+body:not(.light-mode) .wpcf7 input[type="email"],
+body:not(.light-mode) .wpcf7 input[type="tel"],
+body:not(.light-mode) .wpcf7 input[type="url"],
+body:not(.light-mode) .wpcf7 input[type="number"],
+body:not(.light-mode) .wpcf7 input[type="date"],
+body:not(.light-mode) .wpcf7 input[type="password"],
+body:not(.light-mode) .wpcf7 textarea,
+body:not(.light-mode) .wpcf7 select,
+body:not(.light-mode) .wpcf7 .form-control,
+body:not(.light-mode) .wpcf7 .form-select,
+body:not(.light-mode) .contact-us-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+body:not(.light-mode) .contact-us-form textarea,
+body:not(.light-mode) .contact-us-form select,
+body:not(.light-mode) .contact-us-form .form-control,
+body:not(.light-mode) .contact-us-form .form-select,
+body:not(.light-mode) .input-form input:not([type="submit"]),
+body:not(.light-mode) .input-form select,
+body:not(.light-mode) .input-form .form-control,
+body:not(.light-mode) #contact-sec input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+body:not(.light-mode) #contact-sec textarea,
+body:not(.light-mode) #contact-sec select,
+body:not(.light-mode) #contact-sec .form-control,
+body:not(.light-mode) #contact-sec .form-select,
+body:not(.light-mode) .bg-dark form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+body:not(.light-mode) .bg-dark form textarea,
+body:not(.light-mode) .bg-dark form select,
+body:not(.light-mode) .kosmic-dark-input {
+    background-color: #1a1f2c !important;
+    background: #1a1f2c !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 10px !important;
+    height: 56px !important;
+    padding: 0 20px !important;
+    font-size: 15px !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) inset !important;
+    transition: all 0.3s ease-in-out !important;
+    display: block !important;
+}
+
+/* 3. Textarea custom sizing and dark theme */
+body:not(.light-mode) .wpcf7 textarea,
+body:not(.light-mode) .contact-us-form textarea,
+body:not(.light-mode) #contact-sec textarea,
+body:not(.light-mode) .bg-dark form textarea,
+body:not(.light-mode) textarea.kosmic-dark-input {
+    height: auto !important;
+    min-height: 125px !important;
+    padding: 16px 20px !important;
+    line-height: 1.6 !important;
+    resize: vertical !important;
+}
+
+/* 4. Select dropdown options dark styling */
+body:not(.light-mode) .wpcf7 select,
+body:not(.light-mode) .contact-us-form select,
+body:not(.light-mode) #contact-sec select,
+body:not(.light-mode) .bg-dark form select,
+body:not(.light-mode) select.kosmic-dark-input {
+    appearance: auto !important;
+    -webkit-appearance: menulist !important;
+    padding-right: 35px !important;
+    cursor: pointer !important;
+}
+
+body:not(.light-mode) .wpcf7 select option,
+body:not(.light-mode) .contact-us-form select option,
+body:not(.light-mode) #contact-sec select option,
+body:not(.light-mode) .bg-dark form select option,
+body:not(.light-mode) select.kosmic-dark-input option {
+    background-color: #161921 !important;
+    color: #ffffff !important;
+    padding: 10px 15px !important;
+}
+
+/* 5. Legible placeholder text */
+body:not(.light-mode) .wpcf7 input::placeholder,
+body:not(.light-mode) .wpcf7 textarea::placeholder,
+body:not(.light-mode) .contact-us-form input::placeholder,
+body:not(.light-mode) .contact-us-form textarea::placeholder,
+body:not(.light-mode) .input-form input::placeholder,
+body:not(.light-mode) #contact-sec input::placeholder,
+body:not(.light-mode) #contact-sec textarea::placeholder,
+body:not(.light-mode) .kosmic-dark-input::placeholder {
+    color: #8e97a6 !important;
+    opacity: 1 !important;
+}
+
+body:not(.light-mode) .wpcf7 input::-webkit-input-placeholder,
+body:not(.light-mode) .wpcf7 textarea::-webkit-input-placeholder,
+body:not(.light-mode) .contact-us-form input::-webkit-input-placeholder,
+body:not(.light-mode) .contact-us-form textarea::-webkit-input-placeholder,
+body:not(.light-mode) .input-form input::-webkit-input-placeholder,
+body:not(.light-mode) #contact-sec input::-webkit-input-placeholder,
+body:not(.light-mode) #contact-sec textarea::-webkit-input-placeholder,
+body:not(.light-mode) .kosmic-dark-input::-webkit-input-placeholder {
+    color: #8e97a6 !important;
+    opacity: 1 !important;
+}
+
+/* 6. Active Focus Glow state */
+body:not(.light-mode) .wpcf7 input:focus,
+body:not(.light-mode) .wpcf7 textarea:focus,
+body:not(.light-mode) .wpcf7 select:focus,
+body:not(.light-mode) .contact-us-form input:focus,
+body:not(.light-mode) .contact-us-form textarea:focus,
+body:not(.light-mode) .contact-us-form select:focus,
+body:not(.light-mode) .input-form input:focus,
+body:not(.light-mode) .input-form select:focus,
+body:not(.light-mode) #contact-sec input:focus,
+body:not(.light-mode) #contact-sec textarea:focus,
+body:not(.light-mode) #contact-sec select:focus,
+body:not(.light-mode) .kosmic-dark-input:focus {
+    background-color: #212838 !important;
+    background: #212838 !important;
+    border-color: #6B2AE6 !important;
+    box-shadow: 0 0 0 3px rgba(107, 42, 230, 0.35), 0 2px 8px rgba(0, 0, 0, 0.3) inset !important;
+    outline: none !important;
+    color: #ffffff !important;
+}
+
+/* 7. Hover state */
+body:not(.light-mode) .wpcf7 input:hover,
+body:not(.light-mode) .wpcf7 textarea:hover,
+body:not(.light-mode) .wpcf7 select:hover,
+body:not(.light-mode) .contact-us-form input:hover,
+body:not(.light-mode) .contact-us-form textarea:hover,
+body:not(.light-mode) .contact-us-form select:hover,
+body:not(.light-mode) #contact-sec input:hover,
+body:not(.light-mode) #contact-sec textarea:hover,
+body:not(.light-mode) #contact-sec select:hover,
+body:not(.light-mode) .kosmic-dark-input:hover {
+    border-color: rgba(107, 42, 230, 0.7) !important;
+}
+
+/* 8. Branded Gradient Submit Button */
+.wpcf7 input[type="submit"],
+.wpcf7 .wpcf7-submit,
+.wpcf7 button[type="submit"],
+#contact-sec input[type="submit"],
+#contact-sec button[type="submit"],
+.contact-us-form button[type="submit"],
+.contact-us-form input[type="submit"],
+.input-form button[type="submit"],
+.input-form input[type="submit"] {
+    background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: capitalize !important;
+    height: 56px !important;
+    line-height: 56px !important;
+    padding: 0 35px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    display: inline-block !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 18px rgba(107, 42, 230, 0.45) !important;
+    transition: all 0.35s ease-in-out !important;
+    margin-top: 10px !important;
+}
+
+.wpcf7 input[type="submit"]:hover,
+.wpcf7 .wpcf7-submit:hover,
+.wpcf7 button[type="submit"]:hover,
+#contact-sec input[type="submit"]:hover,
+#contact-sec button[type="submit"]:hover,
+.contact-us-form button[type="submit"]:hover,
+.contact-us-form input[type="submit"]:hover,
+.input-form button[type="submit"]:hover,
+.input-form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #EB0029 0%, #b80020 100%) !important;
+    box-shadow: 0 6px 22px rgba(235, 0, 41, 0.5) !important;
+    transform: translateY(-2px) !important;
+    color: #ffffff !important;
+}
+
+/* 9. CF7 Response messages, validation alerts, and spinner */
+.wpcf7-spinner { 
+    display: block !important; 
+    margin: 12px auto !important; 
+    background-color: #6B2AE6 !important; 
+}
+
+.wpcf7-not-valid-tip { 
+    color: #EB0029 !important; 
+    font-size: 13px !important; 
+    margin-top: 6px !important; 
+    display: block !important; 
+}
+
+.wpcf7-response-output {
+    margin: 15px 0 0 !important;
+    padding: 14px 20px !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    border: 1px solid #6B2AE6 !important;
+    background: rgba(107, 42, 230, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: #28a745 !important;
+    background: rgba(40, 167, 69, 0.2) !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+    border-color: #EB0029 !important;
+    background: rgba(235, 0, 41, 0.2) !important;
+}
+
+/* ==========================================================================
+   GALLERY PAGE - 3 IMAGES PER ROW GRID
+   ========================================================================== */
+.filter-active .filter-item {
+    width: 33.333333% !important;
+    max-width: 33.333333% !important;
+    flex: 0 0 33.333333% !important;
+}
+
+@media (min-width: 768px) {
+    .filter-active .filter-item {
+        width: 33.333333% !important;
+        max-width: 33.333333% !important;
+        flex: 0 0 33.333333% !important;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .filter-active .filter-item {
+        width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .filter-active .filter-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+}
+
+/* ==========================================================================
+   LIGHT / WHITE THEME MODE STYLES & TOGGLER
+   ========================================================================== */
+
+/* 1. Theme Mode Toggler Button */
+.theme-mode-toggler {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-mode-toggler .theme-icon-sun {
+    color: #ffb539 !important;
+    font-size: 18px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.theme-mode-toggler .theme-icon-moon {
+    color: #6b2ae6 !important;
+    font-size: 17px;
+    display: none;
+    transition: transform 0.3s ease;
+}
+
+.theme-mode-toggler:hover .theme-icon-sun {
+    transform: rotate(45deg) scale(1.15);
+}
+
+.theme-mode-toggler:hover .theme-icon-moon {
+    transform: rotate(-20deg) scale(1.15);
+}
+
+/* Active Icon State */
+body.light-mode .theme-mode-toggler .theme-icon-sun,
+html.light-mode .theme-mode-toggler .theme-icon-sun {
+    display: none !important;
+}
+
+body.light-mode .theme-mode-toggler .theme-icon-moon,
+html.light-mode .theme-mode-toggler .theme-icon-moon {
+    display: inline-block !important;
+}
+
+/* 2. Global Body & Section Backgrounds in Light Mode */
+body.light-mode {
+    background-color: #f8f9fa !important;
+    color: #4a5568 !important;
+}
+
+body.light-mode .bg-dark,
+body.light-mode section.bg-dark,
+body.light-mode div.bg-dark,
+body.light-mode .space.bg-dark,
+body.light-mode .space-bottom.bg-dark,
+body.light-mode .space-top.bg-dark,
+body.light-mode .overflow-hidden.bg-dark {
+    background-color: #ffffff !important;
+    color: #4a5568 !important;
+}
+
+body.light-mode .bg-title,
+body.light-mode .dance-sec-3.bg-title,
+body.light-mode .about-sec-three.bg-title {
+    background-color: #f3f5f9 !important;
+    color: #1a202c !important;
+}
+
+body.light-mode .service-area-three.bg-dark,
+body.light-mode .testimonial-area-three.bg-dark,
+body.light-mode #branches-sec.bg-dark,
+body.light-mode #contact-sec.bg-dark {
+    background-color: #f6f8fc !important;
+}
+
+/* 3. Typography in Light Mode */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode .sec-title,
+body.light-mode .box-title,
+body.light-mode .widget_title {
+    color: #161921 !important;
+}
+
+body.light-mode .text-white:not(.th-btn):not(.btn):not(.badge):not(.th-social a):not(.icon-btn):not(.gallery-tag):not(.pricing-badge):not(.preloaderCls) {
+    color: #161921 !important;
+}
+
+body.light-mode .text-white-50 {
+    color: #64748b !important;
+}
+
+body.light-mode p,
+body.light-mode .about-text {
+    color: #525960 !important;
+}
+
+/* 4. Header & Navigation in Light Mode */
+body.light-mode .th-header.header-layout3 .menu-area {
+    background-color: rgba(255, 255, 255, 0.96) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .main-menu > ul > li > a {
+    color: #161921 !important;
+}
+
+body.light-mode .main-menu > ul > li > a:hover,
+body.light-mode .main-menu > ul > li.active > a {
+    color: #eb0029 !important;
+}
+
+body.light-mode .main-menu ul.sub-menu {
+    background-color: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .main-menu ul.sub-menu li a {
+    color: #161921 !important;
+}
+
+body.light-mode .main-menu ul.sub-menu li a:hover {
+    color: #6b2ae6 !important;
+}
+
+body.light-mode .sticky-wrapper.sticky .menu-area {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .th-header .icon-btn {
+    background-color: #f1f3f7 !important;
+    color: #161921 !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .th-header .icon-btn:hover {
+    background-color: #6b2ae6 !important;
+    color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+}
+
+body.light-mode .th-menu-toggle {
+    color: #161921 !important;
+    background-color: #f1f3f7 !important;
+}
+
+body.light-mode .sidemenu-content,
+body.light-mode .th-menu-wrapper {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+}
+
+body.light-mode .th-mobile-menu ul li a {
+    color: #161921 !important;
+}
+
+body.light-mode .sidemenu-content .widget_title {
+    color: #161921 !important;
+}
+
+body.light-mode .sidemenu-content .contact-info_text {
+    color: #525960 !important;
+}
+
+/* 5. Hero Banner in Light Mode */
+body.light-mode .hero-3 .th-hero-bg:before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, #ffffff 100%) !important;
+}
+
+body.light-mode .hero-3 .hero-title {
+    color: #161921 !important;
+}
+
+body.light-mode .hero-3 p {
+    color: #525960 !important;
+}
+
+/* 6. Cards & Containers in Light Mode */
+body.light-mode .service-card,
+body.light-mode .service-card.style3,
+body.light-mode .service-card3,
+body.light-mode .service-box,
+body.light-mode .feature-card,
+body.light-mode .team-card,
+body.light-mode .team-card.style3,
+body.light-mode .team-card3,
+body.light-mode .team-box,
+body.light-mode .testi-card,
+body.light-mode .testi-box,
+body.light-mode .testi-box3,
+body.light-mode .feature-card-dark,
+body.light-mode .pricing-card-dark,
+body.light-mode .contact-info,
+body.light-mode .terms-card,
+body.light-mode .blog-card,
+body.light-mode .th-blog,
+body.light-mode .sidebar-area .widget,
+body.light-mode .gallery-card {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+    color: #525960 !important;
+}
+
+body.light-mode .service-card .box-title a,
+body.light-mode .service-card .box-title,
+body.light-mode .team-card .box-title a,
+body.light-mode .team-card .box-title,
+body.light-mode .testi-card .box-title,
+body.light-mode .feature-card-dark h3,
+body.light-mode .pricing-card-dark .box-title,
+body.light-mode .pricing-card-dark .price-value,
+body.light-mode .contact-info_title,
+body.light-mode .terms-card h3,
+body.light-mode .terms-card h4,
+body.light-mode .blog-card .blog-title a,
+body.light-mode .recent-post-title a {
+    color: #161921 !important;
+}
+
+body.light-mode .team-card .team-desig {
+    color: #6b2ae6 !important;
+}
+
+body.light-mode .testi-card .box-text,
+body.light-mode .feature-card-dark p,
+body.light-mode .feature-card-dark span,
+body.light-mode .pricing-card-dark ul li,
+body.light-mode .contact-info_text,
+body.light-mode .contact-info_text a,
+body.light-mode .blog-card .blog-text {
+    color: #525960 !important;
+}
+
+/* 7. Gallery in Light Mode */
+body.light-mode .filter-btn {
+    background: #eef1f6 !important;
+    color: #161921 !important;
+    border: 1px solid #d8dee8 !important;
+}
+
+body.light-mode .filter-btn.active {
+    background: #eb0029 !important;
+    color: #ffffff !important;
+    border-color: #eb0029 !important;
+}
+
+/* 8. Forms in Light Mode - Universal & Exhaustive */
+body.light-mode label,
+body.light-mode .wpcf7 label,
+body.light-mode .contact-us-form label,
+body.light-mode .input-form label,
+body.light-mode #contact-sec label,
+body.light-mode .form-label,
+body.light-mode .kosmic-form-label,
+body.light-mode .wpcf7 form p > label {
+    color: #161921 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    margin-bottom: 8px !important;
+    opacity: 1 !important;
+}
+
+/* All inputs, textareas, and selects */
+body.light-mode input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
+body.light-mode textarea,
+body.light-mode select,
+body.light-mode .form-control,
+body.light-mode .form-select,
+body.light-mode .kosmic-dark-input,
+body.light-mode .contact-us-form input,
+body.light-mode .contact-us-form textarea,
+body.light-mode .contact-us-form select,
+body.light-mode .input-form input,
+body.light-mode .input-form select,
+body.light-mode #contact-sec input,
+body.light-mode #contact-sec textarea,
+body.light-mode #contact-sec select,
+body.light-mode .search-box-widget input,
+body.light-mode .widget_search input,
+body.light-mode .form-control.style2,
+body.light-mode select.style2,
+body.light-mode textarea.style2,
+body.light-mode input.style2 {
+    background-color: #f8fafc !important;
+    background: #f8fafc !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+/* Active focus state */
+body.light-mode input:focus,
+body.light-mode textarea:focus,
+body.light-mode select:focus,
+body.light-mode .form-control:focus,
+body.light-mode .form-select:focus,
+body.light-mode .kosmic-dark-input:focus,
+body.light-mode #contact-sec input:focus,
+body.light-mode #contact-sec textarea:focus {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border-color: #6b2ae6 !important;
+    box-shadow: 0 0 0 3px rgba(107, 42, 230, 0.15) !important;
+    color: #161921 !important;
+    outline: none !important;
+}
+
+/* Legible placeholders */
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder,
+body.light-mode .form-control::placeholder,
+body.light-mode .kosmic-dark-input::placeholder {
+    color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+body.light-mode input::-webkit-input-placeholder,
+body.light-mode textarea::-webkit-input-placeholder,
+body.light-mode .form-control::-webkit-input-placeholder,
+body.light-mode .kosmic-dark-input::-webkit-input-placeholder {
+    color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+
+/* Native select options */
+body.light-mode select option,
+body.light-mode .form-select option,
+body.light-mode .kosmic-dark-input option,
+body.light-mode .wpcf7 select option,
+body.light-mode select.style2 option {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    padding: 10px 15px !important;
+}
+
+/* jQuery Nice Select Plugin Elements */
+body.light-mode .nice-select {
+    background-color: #f8fafc !important;
+    background: #f8fafc !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+body.light-mode .nice-select:hover,
+body.light-mode .nice-select.open,
+body.light-mode .nice-select:focus {
+    background-color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+    box-shadow: 0 0 0 3px rgba(107, 42, 230, 0.15) !important;
+}
+
+body.light-mode .nice-select .current {
+    color: #161921 !important;
+    font-weight: 500 !important;
+}
+
+body.light-mode .nice-select:after {
+    border-bottom: 2px solid #161921 !important;
+    border-right: 2px solid #161921 !important;
+}
+
+body.light-mode .nice-select .list {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .nice-select .option {
+    color: #161921 !important;
+    background-color: #ffffff !important;
+    font-weight: 400 !important;
+}
+
+body.light-mode .nice-select .option:hover,
+body.light-mode .nice-select .option.focus,
+body.light-mode .nice-select .option.selected.focus {
+    background-color: #f1f5f9 !important;
+    color: #6b2ae6 !important;
+    font-weight: 600 !important;
+}
+
+body.light-mode .nice-select .option.selected {
+    color: #6b2ae6 !important;
+    font-weight: 700 !important;
+}
+
+/* Form group icons (user, envelope, phone) */
+body.light-mode .form-group > i {
+    color: #94a3b8 !important;
+}
+
+/* 9. Google Map & Other Embeds */
+body.light-mode .map-sec iframe {
+    filter: none !important;
+}
+
+/* 10. Tables / Schedule in Light Mode */
+body.light-mode table,
+body.light-mode .schedule-table {
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
+}
+
+body.light-mode th {
+    background-color: #f1f5f9 !important;
+    color: #161921 !important;
+}
+
+body.light-mode td {
+    color: #475569 !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* 11. Buttons in Light Mode */
+body.light-mode .th-btn.white-btn {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+body.light-mode .th-btn.white-btn:hover {
+    background-color: #eb0029 !important;
+    color: #ffffff !important;
+    border-color: #eb0029 !important;
+}
+
+/* Service Card Buttons & Blog "Learn More" / "Read More" (Fixes Invisible White Text) */
+body.light-mode .blue-border-btn,
+body.light-mode .th-btn.blue-border-btn,
+body.light-mode .service-card .th-btn.style3,
+body.light-mode .service-card .blue-border-btn,
+body.light-mode .blog-card .blue-border-btn {
+    color: #6b2ae6 !important;
+    border: 2px solid #6b2ae6 !important;
+    background-color: transparent !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+body.light-mode .blue-border-btn:hover,
+body.light-mode .th-btn.blue-border-btn:hover,
+body.light-mode .service-card .th-btn.style3:hover,
+body.light-mode .service-card .blue-border-btn:hover,
+body.light-mode .blog-card .blue-border-btn:hover {
+    background-color: #6b2ae6 !important;
+    color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+}
+
+/* Full-Width Section 6 Button Stripe (Fixes Stark Black Bar) */
+body.light-mode .dance-button .black-btn.style3,
+body.light-mode .dance-button .black-btn,
+body.light-mode .black-btn.style3,
+body.light-mode .black-btn {
+    background-color: #6b2ae6 !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(107, 42, 230, 0.25) !important;
+    font-weight: 700 !important;
+}
+
+body.light-mode .dance-button .black-btn.style3:hover,
+body.light-mode .dance-button .black-btn:hover,
+body.light-mode .black-btn.style3:hover,
+body.light-mode .black-btn:hover {
+    background-color: #eb0029 !important;
+    color: #ffffff !important;
+}
+
+/* 12. Lead Instructors Carousel & Team Cards (Section 9) */
+body.light-mode .team-sec-three {
+    background-color: #f8f9fc !important;
+}
+
+body.light-mode .team-sec-wrapper {
+    background-image: none !important;
+    background-color: #f8f9fc !important;
+}
+
+body.light-mode .th-team,
+body.light-mode .team-item {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .team-item:before,
+body.light-mode .th-team:before {
+    background: #ffffff !important;
+}
+
+body.light-mode .team-item:hover:before,
+body.light-mode .th-team:hover:before {
+    background: linear-gradient(126.95deg, #6b2ae6 0%, #eb0029 100%) !important;
+}
+
+body.light-mode .team-item .team-title,
+body.light-mode .team-item .team-title a,
+body.light-mode .th-team .team-title,
+body.light-mode .th-team .team-title a,
+body.light-mode .th-team .box-title a,
+body.light-mode .team-title a {
+    color: #161921 !important;
+}
+
+body.light-mode .team-item .team-title a:hover,
+body.light-mode .th-team .team-title a:hover,
+body.light-mode .team-title a:hover {
+    color: #eb0029 !important;
+}
+
+body.light-mode .team-item .team-desig,
+body.light-mode .th-team .team-desig {
+    color: #6b2ae6 !important;
+    font-weight: 600 !important;
+}
+
+body.light-mode .team-item .team-social a,
+body.light-mode .th-team .team-social a {
+    color: #64748b !important;
+}
+
+body.light-mode .team-item .team-social a:hover,
+body.light-mode .th-team .team-social a:hover {
+    color: #eb0029 !important;
+}
+
+/* 13. CTA Banner in Light Mode (Section 8) - Fully Light Mode */
+body.light-mode .cta-area-three {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border: 1px solid rgba(107, 42, 230, 0.18) !important;
+    border-bottom: 10px solid #6b2ae6 !important;
+    box-shadow: 0 20px 50px rgba(107, 42, 230, 0.08) !important;
+}
+
+body.light-mode .cta-area-three:before {
+    display: none !important;
+    background: transparent !important;
+}
+
+body.light-mode .cta-area-three .cta-content .sec-title,
+body.light-mode .cta-area-three h2.sec-title,
+body.light-mode .cta-area-three h2 {
+    color: #161921 !important;
+    font-weight: 700 !important;
+}
+
+body.light-mode .cta-area-three .cta-content .cta-text,
+body.light-mode .cta-area-three p {
+    color: #525960 !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn {
+    background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(107, 42, 230, 0.35) !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn:hover {
+    background: linear-gradient(135deg, #EB0029 0%, #b80020 100%) !important;
+    color: #ffffff !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn:hover {
+    background-color: #25D366 !important;
+    border-color: #25D366 !important;
+    color: #ffffff !important;
+}
+
+/* 14. Testimonials in Light Mode (Section 7) */
+body.light-mode .testi-grid_text {
+    color: #334155 !important;
+    font-weight: 500 !important;
+}
+
+body.light-mode .testi-grid_name {
+    color: #161921 !important;
+}
+
+body.light-mode .testi-grid_desig {
+    color: #6b2ae6 !important;
+    font-weight: 600 !important;
+}
+
+body.light-mode .testimonial-area-three .slick-arrow {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .testimonial-area-three .slick-arrow:hover {
+    background-color: #6b2ae6 !important;
+    color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+}
+
+/* 15. GLOBAL FOOTER IN LIGHT MODE */
+body.light-mode .footer-wrapper.footer-layout1,
+body.light-mode footer.footer-wrapper,
+body.light-mode .footer-wrapper {
+    background: #f1f4f9 !important;
+    background-color: #f1f4f9 !important;
+    background-image: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Explicit Footer Widget Reset - Never Cards or Boxes */
+.footer-wrapper .footer-widget,
+.footer-wrapper .widget,
+.footer-wrapper .footer-widget.style2,
+body.light-mode .footer-wrapper .footer-widget,
+body.light-mode .footer-wrapper .widget,
+body.light-mode .footer-wrapper .footer-widget.style2,
+body.light-mode .footer-widget,
+body.light-mode .footer-widget.style2 {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 40px !important;
+}
+
+/* Footer Headings & Titles */
+body.light-mode .footer-wrapper .widget_title,
+body.light-mode .footer-widget .widget_title,
+body.light-mode .footer-wrapper h3,
+body.light-mode .footer-wrapper h4,
+body.light-mode .footer-wrapper h6,
+body.light-mode .footer-wrapper .title,
+body.light-mode .footer-wrapper .social-title {
+    color: #161921 !important;
+}
+
+body.light-mode .footer-widget .widget_title:after {
+    background-color: #eb0029 !important;
+}
+
+/* Footer Text & Paragraphs */
+body.light-mode .footer-wrapper .about-text,
+body.light-mode .footer-wrapper p,
+body.light-mode .footer-wrapper span,
+body.light-mode .footer-wrapper .office-hour div,
+body.light-mode .footer-wrapper .office-hour-details div {
+    color: #525960 !important;
+}
+
+/* Footer Contact & Branches */
+body.light-mode .footer-contact-icon {
+    background-color: #ffffff !important;
+    color: #6b2ae6 !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.light-mode .footer-contact-content strong {
+    color: #161921 !important;
+}
+
+body.light-mode .footer-contact-content .address-text,
+body.light-mode .footer-contact-content .phone-text {
+    color: #525960 !important;
+}
+
+body.light-mode .footer-contact-content .phone-text a,
+body.light-mode .footer-contact-content .email-link {
+    color: #525960 !important;
+}
+
+body.light-mode .footer-contact-content .phone-text a:hover,
+body.light-mode .footer-contact-content .email-link:hover {
+    color: #eb0029 !important;
+}
+
+/* Footer Social Icons */
+body.light-mode .footer-wrapper .footer-social-icon,
+body.light-mode .footer-wrapper .th-social-wrapper a,
+body.light-mode .footer-wrapper .th-social a {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+body.light-mode .footer-wrapper .footer-social-icon:hover,
+body.light-mode .footer-wrapper .th-social-wrapper a:hover,
+body.light-mode .footer-wrapper .th-social a:hover {
+    background-color: #6b2ae6 !important;
+    color: #ffffff !important;
+    border-color: #6b2ae6 !important;
+}
+
+/* Footer Recent Posts */
+body.light-mode .footer-widget .recent-post-wrap .recent-post .post-title a {
+    color: #161921 !important;
+}
+
+body.light-mode .footer-widget .recent-post-wrap .recent-post .post-title a:hover {
+    color: #eb0029 !important;
+}
+
+body.light-mode .footer-widget .recent-post-wrap .recent-post .recent-post-meta a {
+    color: #6b2ae6 !important;
+}
+
+/* Footer Quick Links */
+body.light-mode .footer-quicklinks {
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 30px 0 20px 0 !important;
+}
+
+body.light-mode .quick-links-horizontal li a {
+    color: #4a5568 !important;
+    font-weight: 500 !important;
+}
+
+body.light-mode .quick-links-horizontal li a:hover {
+    color: #eb0029 !important;
+}
+
+/* Footer Copyright Bar */
+body.light-mode .footer-layout1 .copyright-wrap,
+body.light-mode .copyright-wrap {
+    background: #e2e8f0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .copyright-text {
+    color: #4a5568 !important;
+}
+
+body.light-mode .copyright-text a {
+    color: #161921 !important;
+    font-weight: 600 !important;
+}
+
+body.light-mode .footer-copyright-right ul li a {
+    color: #4a5568 !important;
+}
+
+body.light-mode .footer-copyright-right ul li a:hover {
+    color: #eb0029 !important;
+}
+
+/* 16. Inner Page Breadcrumbs & Sections */
+body.light-mode .breadcumb-wrapper::before {
+    background: linear-gradient(180deg, rgba(240, 243, 248, 0.92) 0%, rgba(240, 243, 248, 0.98) 100%) !important;
+}
+
+body.light-mode .breadcumb-title {
+    color: #161921 !important;
+}
+
+body.light-mode .breadcumb-menu li {
+    color: #161921 !important;
+}
+
+body.light-mode .breadcumb-menu li a {
+    color: #64748b !important;
+}
+
+body.light-mode .breadcumb-menu li a:hover {
+    color: #eb0029 !important;
+}
+
+body.light-mode .breadcumb-menu li:not(:last-child)::after {
+    color: #94a3b8 !important;
+}
+
+/* Pricing Page & Fee Cards */
+body.light-mode .pricing-card-dark {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .pricing-card-dark .box-title {
+    color: #161921 !important;
+}
+
+body.light-mode .pricing-card-dark .price-value {
+    color: #161921 !important;
+}
+
+body.light-mode .pricing-card-dark ul li {
+    color: #525960 !important;
+}
+
+/* Contact Info Cards (Contact Us Page) */
+body.light-mode .contact-info {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .contact-info_title {
+    color: #161921 !important;
+}
+
+body.light-mode .contact-info_text,
+body.light-mode .contact-info_text p,
+body.light-mode .contact-info_text a {
+    color: #525960 !important;
+}
+
+body.light-mode .contact-info_icon {
+    background-color: #f1f4f9 !important;
+    color: #6b2ae6 !important;
+}
+
+/* Terms & Conditions / Policy Cards */
+body.light-mode .terms-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    color: #525960 !important;
+}
+
+body.light-mode .terms-card h3,
+body.light-mode .terms-card h4 {
+    color: #161921 !important;
+}
+
+/* --------------------------------------------------------------------------
+   14. BLOG & SINGLE POST LIGHT MODE OVERRIDES
+   -------------------------------------------------------------------------- */
+body.light-mode .blog-card-dark,
+body.light-mode .blog-single-box,
+body.light-mode .widget-card-dark {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .blog-card-dark:hover {
+    border-color: #eb0029 !important;
+    box-shadow: 0 14px 30px rgba(235, 0, 41, 0.15) !important;
+}
+
+body.light-mode .blog-card-title,
+body.light-mode .blog-card-title a,
+body.light-mode .blog-single-title,
+body.light-mode .widget-title-dark {
+    color: #161921 !important;
+}
+
+body.light-mode .blog-card-title a:hover,
+body.light-mode .recent-post-title a:hover {
+    color: #eb0029 !important;
+}
+
+body.light-mode .blog-meta-list li {
+    color: #64748b !important;
+}
+
+body.light-mode .blog-meta-list li a {
+    color: #64748b !important;
+}
+
+body.light-mode .blog-meta-list li a:hover {
+    color: #eb0029 !important;
+}
+
+body.light-mode .recent-post-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .recent-post-title a {
+    color: #161921 !important;
+}
+
+body.light-mode .widget-service-list li a {
+    background: #f8fafc !important;
+    color: #161921 !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 18px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+body.light-mode .widget-service-list li a .cat-name {
+    color: #161921 !important;
+}
+
+body.light-mode .widget-service-list li a span,
+body.light-mode .widget-service-list li a .cat-count {
+    color: #6b2ae6 !important;
+    background: #ffffff !important;
+    padding: 3px 10px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    border: 1px solid #e2e8f0 !important;
+    transition: all 0.3s ease !important;
+}
+
+body.light-mode .widget-service-list li a:hover,
+body.light-mode .widget-service-list li a.active {
+    background: #eb0029 !important;
+    color: #ffffff !important;
+    border-color: #eb0029 !important;
+    padding-left: 22px !important;
+    box-shadow: 0 6px 18px rgba(235, 0, 41, 0.22) !important;
+}
+
+body.light-mode .widget-service-list li a:hover .cat-name,
+body.light-mode .widget-service-list li a.active .cat-name {
+    color: #ffffff !important;
+}
+
+body.light-mode .widget-service-list li a:hover span,
+body.light-mode .widget-service-list li a.active span,
+body.light-mode .widget-service-list li a:hover .cat-count,
+body.light-mode .widget-service-list li a.active .cat-count {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: transparent !important;
+}
+
+body.light-mode .tagcloud a {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+body.light-mode .tagcloud a:hover {
+    background: #eb0029 !important;
+    color: #ffffff !important;
+    border-color: #eb0029 !important;
+}
+
+body.light-mode .search-box-widget input {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #161921 !important;
+}
+
+body.light-mode .search-box-widget input::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.light-mode .pagination-btn {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #161921 !important;
+}
+
+body.light-mode .pagination-btn.active,
+body.light-mode .pagination-btn:hover {
+    background: #eb0029 !important;
+    border-color: #eb0029 !important;
+    color: #ffffff !important;
+}
+
+body.light-mode .blog-quote-dark {
+    background: #f8fafc !important;
+    border-left: 4px solid #eb0029 !important;
+}
+
+body.light-mode .blog-quote-dark p {
+    color: #161921 !important;
+}
+
+body.light-mode .author-bio-card {
+    background: #f8fafc !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .author-bio-card h4 {
+    color: #161921 !important;
+}
+
+body.light-mode .comment-card {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .comment-card h5 {
+    color: #161921 !important;
+}
+
+/* ---------------------------------------------------------
+   SERVICE CPT & OVERVIEW - LIGHT MODE STYLES
+   --------------------------------------------------------- */
+body.light-mode .service-card-item {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .service-card-item:hover {
+    border-color: #eb0029 !important;
+    box-shadow: 0 12px 30px rgba(235, 0, 41, 0.15) !important;
+}
+
+body.light-mode .service-card-item .badge-num {
+    color: rgba(0, 0, 0, 0.06) !important;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.12) !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+body.light-mode .service-card-item .box-title,
+body.light-mode .service-card-item .box-title a {
+    color: #161921 !important;
+}
+
+body.light-mode .service-card-item p.text-white-50 {
+    color: #64748b !important;
+}
+
+body.light-mode .page-single {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .service-title {
+    color: #161921 !important;
+}
+
+body.light-mode .service-subtitle {
+    color: #4a5568 !important;
+}
+
+body.light-mode .service-description,
+body.light-mode .service-description p {
+    color: #4a5568 !important;
+}
+
+body.light-mode .service-batch-card {
+    background: rgba(107, 42, 230, 0.06) !important;
+    border: 1px solid rgba(107, 42, 230, 0.18) !important;
+}
+
+body.light-mode .service-batch-card span.d-block {
+    color: #161921 !important;
+}
+
+body.light-mode .service-batch-card span.text-white-50 {
+    color: #4a5568 !important;
+}
+
+body.light-mode .variation-card {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 4px solid #eb0029 !important;
+}
+
+body.light-mode .variation-card:hover {
+    background: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .variation-day {
+    color: #eb0029 !important;
+}
+
+body.light-mode .variation-name {
+    color: #161921 !important;
+}
+
+body.light-mode .variation-card p {
+    color: #4a5568 !important;
+}
+
+body.light-mode .service-benefits-title {
+    color: #161921 !important;
+}
+
+body.light-mode .service-benefits-list,
+body.light-mode .service-benefits-list li,
+body.light-mode .service-benefits-list li span {
+    color: #4a5568 !important;
+}
+
+body.light-mode .widget-card-dark {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.light-mode .widget-title-dark {
+    color: #161921 !important;
+    border-bottom: 2px solid rgba(107, 42, 230, 0.2) !important;
+}
+
+body.light-mode .widget-service-list li a {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #161921 !important;
+}
+
+body.light-mode .widget-service-list li a .cat-name {
+    color: #161921 !important;
+}
+
+body.light-mode .widget-service-list li a span.cat-count {
+    background: #e2e8f0 !important;
+    color: #475569 !important;
+}
+
+body.light-mode .widget-service-list li a:hover,
+body.light-mode .widget-service-list li a.active {
+    background: #eb0029 !important;
+    border-color: #eb0029 !important;
+    color: #ffffff !important;
+}
+
+body.light-mode .widget-service-list li a:hover .cat-name,
+body.light-mode .widget-service-list li a.active .cat-name {
+    color: #ffffff !important;
+}
+
+body.light-mode .widget-service-list li a:hover span.cat-count,
+body.light-mode .widget-service-list li a.active span.cat-count {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+}
+
+body.light-mode .widget-card-dark strong.text-white {
+    color: #161921 !important;
+}
+
+body.light-mode .widget-card-dark .text-white-50,
+body.light-mode .widget-card-dark .text-white-50 span {
+    color: #64748b !important;
+}
+
+body.light-mode .widget-card-dark a.text-white {
+    color: #161921 !important;
+}
+

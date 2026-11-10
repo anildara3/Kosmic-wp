@@ -1,0 +1,176 @@
+{
+    "key": "group_kosmic_instructor",
+    "title": "Instructor Profile Details",
+    "fields": [
+        {
+            "key": "field_instructor_designation",
+            "label": "Designation \/ Role Title",
+            "name": "instructor_designation",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Founder & Master Choreographer, Kuchipudi Classical Guru, Hip-Hop Instructor",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_instructor_badge",
+            "label": "Category Badge",
+            "name": "instructor_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Founder, Classical, Hip-Hop, Zumba, Gymnastics",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_instructor_short_desc",
+            "label": "Short Bio \/ Description",
+            "name": "instructor_short_desc",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Brief summary shown on team cards",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_instructor_is_spotlight",
+            "label": "Feature as Top Spotlight Founder",
+            "name": "instructor_is_spotlight",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Check to feature this instructor in the large spotlight banner on the Instructors page",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "ui": 1,
+            "default_value": 0,
+            "message": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_instructor_facebook",
+            "label": "Facebook URL",
+            "name": "instructor_facebook",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_instructor_instagram",
+            "label": "Instagram URL",
+            "name": "instructor_instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_instructor_youtube",
+            "label": "YouTube URL",
+            "name": "instructor_youtube",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_instructor_linkedin",
+            "label": "LinkedIn \/ Twitter URL",
+            "name": "instructor_linkedin",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "instructor"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793818950
+}

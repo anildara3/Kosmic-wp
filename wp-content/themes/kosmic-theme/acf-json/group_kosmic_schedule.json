@@ -1,0 +1,136 @@
+{
+    "key": "group_kosmic_schedule",
+    "title": "Class Schedule Slot Details",
+    "fields": [
+        {
+            "key": "field_schedule_time",
+            "label": "Time Slot",
+            "name": "schedule_time",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. 06:00 AM – 07:00 AM",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_schedule_days",
+            "label": "Days",
+            "name": "schedule_days",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Mon – Fri, Mon Wed Fri, Sat & Sun",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_schedule_instructor",
+            "label": "Instructor(s)",
+            "name": "schedule_instructor",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Pooja Reddy \/ Mahesh Master",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_schedule_badge",
+            "label": "Batch Type Badge",
+            "name": "schedule_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Ladies Special, All Levels, Kids (Age 4-12)",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_schedule_badge_style",
+            "label": "Badge Color Style",
+            "name": "schedule_badge_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "badge-ladies": "Ladies Special (Pink \/ Neon)",
+                "badge-batch": "General \/ Kids (Blue \/ Purple)"
+            },
+            "default_value": "badge-batch",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "class_schedule"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793818950
+}

@@ -1,0 +1,168 @@
+{
+    "key": "group_kosmic_pricing",
+    "title": "Pricing Plan Details",
+    "fields": [
+        {
+            "key": "field_plan_subtitle",
+            "label": "Plan Subtitle",
+            "name": "plan_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. Bollywood, Tollywood & Hip-Hop, Signature Fitness & Fat Burn Routine",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_plan_price",
+            "label": "Price",
+            "name": "plan_price",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. ₹2,500",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_plan_period",
+            "label": "Billing Period",
+            "name": "plan_period",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "\/ month",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_plan_featured",
+            "label": "Highlight as Featured \/ Popular",
+            "name": "plan_featured",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Adds glowing highlight style",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "ui": 1,
+            "default_value": 0,
+            "message": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_plan_features",
+            "label": "Plan Features List (1 per line)",
+            "name": "plan_features",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter features, one per line. Checkmark icons added automatically.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 6,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_plan_btn_text",
+            "label": "Button Text",
+            "name": "plan_btn_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Enroll in Pass",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_plan_btn_url",
+            "label": "Button Link",
+            "name": "plan_btn_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#contact-sec",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "pricing_plan"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793818950
+}
