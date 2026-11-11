@@ -40,8 +40,8 @@ $h2_title = get_field('h2_title', $front_id) ?: '5-Days-5-Variation Fitness Clas
 $h2_desc  = get_field('h2_desc', $front_id) ?: 'Say goodbye to monotonous workouts! Our 5-Days-5-Variation routine blends Zumba, Aerobics, Functional Strength, Cardio Dance, and Core Sculpting across weekdays. Proven to accelerate fat loss, improve stamina, and keep you energized.';
 $h2_img   = get_field('h2_img', $front_id) ?: kosmic_asset('img/normal/dance_2.png');
 
-$cta_title    = get_field('cta_title', $front_id) ?: 'Sign Up For Modern Dance & Weight Loss Classes';
-$cta_text     = get_field('cta_text', $front_id) ?: 'Train under Tollywood movie choreographer Mahesh Master and certified fitness trainers. Separate batches for kids, teens, ladies, and working adults across Padmarao Nagar & Shivam Road DD Colony branches.';
+$cta_title    = get_field('cta_title', $front_id) ?: 'Dance & Weight Loss Classes | Book Free Trial';
+$cta_text     = get_field('cta_text', $front_id) ?: 'Train with Tollywood choreographers and certified fitness trainers. Burn calories, learn modern choreography, and tone your body with separate batches for all ages.';
 
 $contact_sub   = get_field('home_contact_subtitle', $front_id) ?: 'Get In Touch';
 $contact_title = get_field('home_contact_title', $front_id) ?: "Let's Talk to Mahesh Master & Expert Team";
@@ -340,7 +340,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
 </section>
 
 <!-- 7. Testimonials (Dynamic from CPT: testimonial) -->
-<section class="testimonial-area-three bg-dark space" id="testimonials-sec" data-bg-src="<?php echo kosmic_asset('img/bg/map_bg_2.png'); ?>">
+<section class="testimonial-area-three bg-dark space" id="testimonials-sec"; ?>">
     <div class="container">
         <div class="title-area text-center">
             <span class="sub-title mt-n1">Student &amp; Parent Reviews</span>
@@ -419,7 +419,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
                 </div>
                 <div class="col-md-5 col-lg-5">
                     <div class="cta-image movingX">
-                        <img src="<?php echo kosmic_asset('img/normal/cta_1.png'); ?>" alt="Kosmic Mobile App">
+                        <img src="<?php echo kosmic_asset('img\\normal\\cta_1.png'); ?>" alt="Kosmic Mobile App">
                     </div>
                 </div>
             </div>

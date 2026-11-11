@@ -334,10 +334,10 @@ function kosmic_cf7_custom_styles() {
         body.light-mode .input-form input:not([type="submit"]),
         body.light-mode .input-form select,
         body.light-mode .input-form .form-control,
-        body.light-mode #contact-sec input:not([type="submit"]),
+        body.light-mode #contact-sec input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
         body.light-mode #contact-sec textarea,
         body.light-mode #contact-sec select,
-        body.light-mode .kosmic-dark-input {
+        body.light-mode .kosmic-dark-input:not([type="submit"]):not([type="button"]):not(.th-btn):not(.btn) {
             background-color: #f8fafc !important;
             background: #f8fafc !important;
             color: #161921 !important;
@@ -486,7 +486,21 @@ function kosmic_cf7_custom_styles() {
         .contact-us-form button[type="submit"],
         .contact-us-form input[type="submit"],
         .input-form button[type="submit"],
-        .input-form input[type="submit"] {
+        .input-form input[type="submit"],
+        body.light-mode input[type="submit"],
+        body.light-mode button[type="submit"],
+        body.light-mode .wpcf7 input[type="submit"],
+        body.light-mode .wpcf7 .wpcf7-submit,
+        body.light-mode .wpcf7 button[type="submit"],
+        body.light-mode #contact-sec input[type="submit"],
+        body.light-mode #contact-sec button[type="submit"],
+        body.light-mode #contact-sec .wpcf7-submit,
+        body.light-mode #contact-sec .th-btn,
+        body.light-mode .contact-us-form button[type="submit"],
+        body.light-mode .contact-us-form input[type="submit"],
+        body.light-mode .contact-us-form .th-btn,
+        body.light-mode .input-form button[type="submit"],
+        body.light-mode .input-form input[type="submit"] {
             background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
             color: #ffffff !important;
             font-size: 16px !important;
@@ -515,7 +529,21 @@ function kosmic_cf7_custom_styles() {
         .contact-us-form button[type="submit"]:hover,
         .contact-us-form input[type="submit"]:hover,
         .input-form button[type="submit"]:hover,
-        .input-form input[type="submit"]:hover {
+        .input-form input[type="submit"]:hover,
+        body.light-mode input[type="submit"]:hover,
+        body.light-mode button[type="submit"]:hover,
+        body.light-mode .wpcf7 input[type="submit"]:hover,
+        body.light-mode .wpcf7 .wpcf7-submit:hover,
+        body.light-mode .wpcf7 button[type="submit"]:hover,
+        body.light-mode #contact-sec input[type="submit"]:hover,
+        body.light-mode #contact-sec button[type="submit"]:hover,
+        body.light-mode #contact-sec .wpcf7-submit:hover,
+        body.light-mode #contact-sec .th-btn:hover,
+        body.light-mode .contact-us-form button[type="submit"]:hover,
+        body.light-mode .contact-us-form input[type="submit"]:hover,
+        body.light-mode .contact-us-form .th-btn:hover,
+        body.light-mode .input-form button[type="submit"]:hover,
+        body.light-mode .input-form input[type="submit"]:hover {
             background: linear-gradient(135deg, #EB0029 0%, #b80020 100%) !important;
             box-shadow: 0 6px 22px rgba(235, 0, 41, 0.5) !important;
             transform: translateY(-2px) !important;

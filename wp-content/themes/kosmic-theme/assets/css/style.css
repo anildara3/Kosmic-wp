@@ -27134,6 +27134,7 @@ hr.style1 {
     font-weight: 600;
     line-height: 1.4;
     margin-bottom: 4px;
+    max-width: 80%;
 }
 
 .footer-widget .recent-post-wrap .recent-post .post-title a {
@@ -28478,13 +28479,14 @@ body.error-page {
 /* --------------------------------------------------------------------------
    16. KOSMIC STUDIO - COMPLETE DARK FORM & CONTACT FORM 7 OVERRIDES
    -------------------------------------------------------------------------- */
-.wpcf7 label,
-.wpcf7-form label,
-.contact-us-form label,
-.input-form label,
-#contact-sec label,
-.bg-dark label,
-.form-label {
+body:not(.light-mode) .wpcf7 label,
+body:not(.light-mode) .wpcf7-form label,
+body:not(.light-mode) .contact-us-form label,
+body:not(.light-mode) .input-form label,
+body:not(.light-mode) #contact-sec label,
+body:not(.light-mode) .bg-dark label,
+body:not(.light-mode) .form-label,
+body:not(.light-mode) .kosmic-form-label {
     color: #ffffff !important;
     font-size: 14px !important;
     font-weight: 600 !important;
@@ -28495,11 +28497,11 @@ body.error-page {
     line-height: 1.4 !important;
 }
 
-.wpcf7 form p {
+body:not(.light-mode) .wpcf7 form p {
     margin-bottom: 18px !important;
 }
 
-.wpcf7 form p > label {
+body:not(.light-mode) .wpcf7 form p > label {
     display: block !important;
     width: 100% !important;
     color: #ffffff !important;
@@ -28514,34 +28516,34 @@ body.error-page {
     margin-top: 6px !important;
 }
 
-.wpcf7 input[type="text"],
-.wpcf7 input[type="email"],
-.wpcf7 input[type="tel"],
-.wpcf7 input[type="url"],
-.wpcf7 input[type="number"],
-.wpcf7 input[type="date"],
-.wpcf7 input[type="password"],
-.wpcf7 textarea,
-.wpcf7 select,
-.wpcf7 .form-control,
-.wpcf7 .form-select,
-.contact-us-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
-.contact-us-form textarea,
-.contact-us-form select,
-.contact-us-form .form-control,
-.contact-us-form .form-select,
-.input-form input:not([type="submit"]),
-.input-form select,
-.input-form .form-control,
-#contact-sec input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
-#contact-sec textarea,
-#contact-sec select,
-#contact-sec .form-control,
-#contact-sec .form-select,
-.bg-dark form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
-.bg-dark form textarea,
-.bg-dark form select,
-.kosmic-dark-input {
+body:not(.light-mode) .wpcf7 input[type="text"],
+body:not(.light-mode) .wpcf7 input[type="email"],
+body:not(.light-mode) .wpcf7 input[type="tel"],
+body:not(.light-mode) .wpcf7 input[type="url"],
+body:not(.light-mode) .wpcf7 input[type="number"],
+body:not(.light-mode) .wpcf7 input[type="date"],
+body:not(.light-mode) .wpcf7 input[type="password"],
+body:not(.light-mode) .wpcf7 textarea,
+body:not(.light-mode) .wpcf7 select,
+body:not(.light-mode) .wpcf7 .form-control,
+body:not(.light-mode) .wpcf7 .form-select,
+body:not(.light-mode) .contact-us-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+body:not(.light-mode) .contact-us-form textarea,
+body:not(.light-mode) .contact-us-form select,
+body:not(.light-mode) .contact-us-form .form-control,
+body:not(.light-mode) .contact-us-form .form-select,
+body:not(.light-mode) .input-form input:not([type="submit"]),
+body:not(.light-mode) .input-form select,
+body:not(.light-mode) .input-form .form-control,
+body:not(.light-mode) #contact-sec input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+body:not(.light-mode) #contact-sec textarea,
+body:not(.light-mode) #contact-sec select,
+body:not(.light-mode) #contact-sec .form-control,
+body:not(.light-mode) #contact-sec .form-select,
+body:not(.light-mode) .bg-dark form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+body:not(.light-mode) .bg-dark form textarea,
+body:not(.light-mode) .bg-dark form select,
+body:not(.light-mode) .kosmic-dark-input {
     background-color: #1a1f2c !important;
     background: #1a1f2c !important;
     color: #ffffff !important;
@@ -28557,11 +28559,11 @@ body.error-page {
     display: block !important;
 }
 
-.wpcf7 textarea,
-.contact-us-form textarea,
-#contact-sec textarea,
-.bg-dark form textarea,
-textarea.kosmic-dark-input {
+body:not(.light-mode) .wpcf7 textarea,
+body:not(.light-mode) .contact-us-form textarea,
+body:not(.light-mode) #contact-sec textarea,
+body:not(.light-mode) .bg-dark form textarea,
+body:not(.light-mode) textarea.kosmic-dark-input {
     height: auto !important;
     min-height: 125px !important;
     padding: 16px 20px !important;
@@ -28569,63 +28571,63 @@ textarea.kosmic-dark-input {
     resize: vertical !important;
 }
 
-.wpcf7 select,
-.contact-us-form select,
-#contact-sec select,
-.bg-dark form select,
-select.kosmic-dark-input {
+body:not(.light-mode) .wpcf7 select,
+body:not(.light-mode) .contact-us-form select,
+body:not(.light-mode) #contact-sec select,
+body:not(.light-mode) .bg-dark form select,
+body:not(.light-mode) select.kosmic-dark-input {
     appearance: auto !important;
     -webkit-appearance: menulist !important;
     padding-right: 35px !important;
     cursor: pointer !important;
 }
 
-.wpcf7 select option,
-.contact-us-form select option,
-#contact-sec select option,
-.bg-dark form select option,
-select.kosmic-dark-input option {
+body:not(.light-mode) .wpcf7 select option,
+body:not(.light-mode) .contact-us-form select option,
+body:not(.light-mode) #contact-sec select option,
+body:not(.light-mode) .bg-dark form select option,
+body:not(.light-mode) select.kosmic-dark-input option {
     background-color: #161921 !important;
     color: #ffffff !important;
     padding: 10px 15px !important;
 }
 
-.wpcf7 input::placeholder,
-.wpcf7 textarea::placeholder,
-.contact-us-form input::placeholder,
-.contact-us-form textarea::placeholder,
-.input-form input::placeholder,
-#contact-sec input::placeholder,
-#contact-sec textarea::placeholder,
-.kosmic-dark-input::placeholder {
+body:not(.light-mode) .wpcf7 input::placeholder,
+body:not(.light-mode) .wpcf7 textarea::placeholder,
+body:not(.light-mode) .contact-us-form input::placeholder,
+body:not(.light-mode) .contact-us-form textarea::placeholder,
+body:not(.light-mode) .input-form input::placeholder,
+body:not(.light-mode) #contact-sec input::placeholder,
+body:not(.light-mode) #contact-sec textarea::placeholder,
+body:not(.light-mode) .kosmic-dark-input::placeholder {
     color: #8e97a6 !important;
     opacity: 1 !important;
 }
 
-.wpcf7 input::-webkit-input-placeholder,
-.wpcf7 textarea::-webkit-input-placeholder,
-.contact-us-form input::-webkit-input-placeholder,
-.contact-us-form textarea::-webkit-input-placeholder,
-.input-form input::-webkit-input-placeholder,
-#contact-sec input::-webkit-input-placeholder,
-#contact-sec textarea::-webkit-input-placeholder,
-.kosmic-dark-input::-webkit-input-placeholder {
+body:not(.light-mode) .wpcf7 input::-webkit-input-placeholder,
+body:not(.light-mode) .wpcf7 textarea::-webkit-input-placeholder,
+body:not(.light-mode) .contact-us-form input::-webkit-input-placeholder,
+body:not(.light-mode) .contact-us-form textarea::-webkit-input-placeholder,
+body:not(.light-mode) .input-form input::-webkit-input-placeholder,
+body:not(.light-mode) #contact-sec input::-webkit-input-placeholder,
+body:not(.light-mode) #contact-sec textarea::-webkit-input-placeholder,
+body:not(.light-mode) .kosmic-dark-input::-webkit-input-placeholder {
     color: #8e97a6 !important;
     opacity: 1 !important;
 }
 
-.wpcf7 input:focus,
-.wpcf7 textarea:focus,
-.wpcf7 select:focus,
-.contact-us-form input:focus,
-.contact-us-form textarea:focus,
-.contact-us-form select:focus,
-.input-form input:focus,
-.input-form select:focus,
-#contact-sec input:focus,
-#contact-sec textarea:focus,
-#contact-sec select:focus,
-.kosmic-dark-input:focus {
+body:not(.light-mode) .wpcf7 input:focus,
+body:not(.light-mode) .wpcf7 textarea:focus,
+body:not(.light-mode) .wpcf7 select:focus,
+body:not(.light-mode) .contact-us-form input:focus,
+body:not(.light-mode) .contact-us-form textarea:focus,
+body:not(.light-mode) .contact-us-form select:focus,
+body:not(.light-mode) .input-form input:focus,
+body:not(.light-mode) .input-form select:focus,
+body:not(.light-mode) #contact-sec input:focus,
+body:not(.light-mode) #contact-sec textarea:focus,
+body:not(.light-mode) #contact-sec select:focus,
+body:not(.light-mode) .kosmic-dark-input:focus {
     background-color: #212838 !important;
     background: #212838 !important;
     border-color: #6B2AE6 !important;
@@ -28634,16 +28636,16 @@ select.kosmic-dark-input option {
     color: #ffffff !important;
 }
 
-.wpcf7 input:hover,
-.wpcf7 textarea:hover,
-.wpcf7 select:hover,
-.contact-us-form input:hover,
-.contact-us-form textarea:hover,
-.contact-us-form select:hover,
-#contact-sec input:hover,
-#contact-sec textarea:hover,
-#contact-sec select:hover,
-.kosmic-dark-input:hover {
+body:not(.light-mode) .wpcf7 input:hover,
+body:not(.light-mode) .wpcf7 textarea:hover,
+body:not(.light-mode) .wpcf7 select:hover,
+body:not(.light-mode) .contact-us-form input:hover,
+body:not(.light-mode) .contact-us-form textarea:hover,
+body:not(.light-mode) .contact-us-form select:hover,
+body:not(.light-mode) #contact-sec input:hover,
+body:not(.light-mode) #contact-sec textarea:hover,
+body:not(.light-mode) #contact-sec select:hover,
+body:not(.light-mode) .kosmic-dark-input:hover {
     border-color: rgba(107, 42, 230, 0.7) !important;
 }
 
@@ -29032,21 +29034,50 @@ body.light-mode .wpcf7 form p > label {
     opacity: 1 !important;
 }
 
-/* All inputs, textareas, and selects */
+/* All inputs, textareas, and selects in Light Mode */
 body.light-mode input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
 body.light-mode textarea,
 body.light-mode select,
 body.light-mode .form-control,
 body.light-mode .form-select,
-body.light-mode .kosmic-dark-input,
-body.light-mode .contact-us-form input,
-body.light-mode .contact-us-form textarea,
-body.light-mode .contact-us-form select,
-body.light-mode .input-form input,
-body.light-mode .input-form select,
-body.light-mode #contact-sec input,
+body.light-mode .kosmic-dark-input:not([type="submit"]):not([type="button"]):not(.th-btn):not(.btn),
+body.light-mode .wpcf7 input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
+body.light-mode .wpcf7 input[type="text"],
+body.light-mode .wpcf7 input[type="email"],
+body.light-mode .wpcf7 input[type="tel"],
+body.light-mode .wpcf7 input[type="url"],
+body.light-mode .wpcf7 input[type="number"],
+body.light-mode .wpcf7 input[type="date"],
+body.light-mode .wpcf7 input[type="password"],
+body.light-mode .wpcf7 textarea,
+body.light-mode .wpcf7 select,
+body.light-mode .wpcf7 .form-control,
+body.light-mode .wpcf7 .form-select,
+body.light-mode .wpcf7 .kosmic-dark-input,
+body.light-mode #contact-sec input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
+body.light-mode #contact-sec input[type="text"],
+body.light-mode #contact-sec input[type="email"],
+body.light-mode #contact-sec input[type="tel"],
 body.light-mode #contact-sec textarea,
 body.light-mode #contact-sec select,
+body.light-mode #contact-sec .form-control,
+body.light-mode #contact-sec .form-select,
+body.light-mode #contact-sec .kosmic-dark-input,
+body.light-mode .contact-us-form input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
+body.light-mode .contact-us-form textarea,
+body.light-mode .contact-us-form select,
+body.light-mode .contact-us-form .form-control,
+body.light-mode .contact-us-form .form-select,
+body.light-mode .contact-us-form .kosmic-dark-input,
+body.light-mode .input-form input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
+body.light-mode .input-form select,
+body.light-mode .input-form textarea,
+body.light-mode .input-form .form-control,
+body.light-mode .bg-dark form input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
+body.light-mode .bg-dark form textarea,
+body.light-mode .bg-dark form select,
+body.light-mode .bg-dark form .form-control,
+body.light-mode .bg-dark form .kosmic-dark-input,
 body.light-mode .search-box-widget input,
 body.light-mode .widget_search input,
 body.light-mode .form-control.style2,
@@ -29059,23 +29090,84 @@ body.light-mode input.style2 {
     border: 1px solid #cbd5e1 !important;
     border-radius: 10px !important;
     box-shadow: none !important;
+    -webkit-text-fill-color: #161921 !important;
 }
 
 /* Active focus state */
-body.light-mode input:focus,
+body.light-mode input:not([type="submit"]):not([type="button"]):focus,
 body.light-mode textarea:focus,
 body.light-mode select:focus,
 body.light-mode .form-control:focus,
 body.light-mode .form-select:focus,
 body.light-mode .kosmic-dark-input:focus,
+body.light-mode .wpcf7 input:focus,
+body.light-mode .wpcf7 textarea:focus,
+body.light-mode .wpcf7 select:focus,
 body.light-mode #contact-sec input:focus,
-body.light-mode #contact-sec textarea:focus {
+body.light-mode #contact-sec textarea:focus,
+body.light-mode #contact-sec select:focus {
     background-color: #ffffff !important;
     background: #ffffff !important;
     border-color: #6b2ae6 !important;
     box-shadow: 0 0 0 3px rgba(107, 42, 230, 0.15) !important;
     color: #161921 !important;
+    -webkit-text-fill-color: #161921 !important;
     outline: none !important;
+}
+
+/* Submit Buttons in Light Mode */
+body.light-mode input[type="submit"],
+body.light-mode button[type="submit"],
+body.light-mode .wpcf7 input[type="submit"],
+body.light-mode .wpcf7 .wpcf7-submit,
+body.light-mode .wpcf7 button[type="submit"],
+body.light-mode #contact-sec input[type="submit"],
+body.light-mode #contact-sec button[type="submit"],
+body.light-mode #contact-sec .wpcf7-submit,
+body.light-mode #contact-sec .th-btn,
+body.light-mode .contact-us-form button[type="submit"],
+body.light-mode .contact-us-form input[type="submit"],
+body.light-mode .contact-us-form .th-btn,
+body.light-mode .input-form button[type="submit"],
+body.light-mode .input-form input[type="submit"] {
+    background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: capitalize !important;
+    height: 56px !important;
+    line-height: 56px !important;
+    padding: 0 35px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    display: inline-block !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 18px rgba(107, 42, 230, 0.45) !important;
+    transition: all 0.35s ease-in-out !important;
+    margin-top: 10px !important;
+}
+
+body.light-mode input[type="submit"]:hover,
+body.light-mode button[type="submit"]:hover,
+body.light-mode .wpcf7 input[type="submit"]:hover,
+body.light-mode .wpcf7 .wpcf7-submit:hover,
+body.light-mode .wpcf7 button[type="submit"]:hover,
+body.light-mode #contact-sec input[type="submit"]:hover,
+body.light-mode #contact-sec button[type="submit"]:hover,
+body.light-mode #contact-sec .wpcf7-submit:hover,
+body.light-mode #contact-sec .th-btn:hover,
+body.light-mode .contact-us-form button[type="submit"]:hover,
+body.light-mode .contact-us-form input[type="submit"]:hover,
+body.light-mode .contact-us-form .th-btn:hover,
+body.light-mode .input-form button[type="submit"]:hover,
+body.light-mode .input-form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #EB0029 0%, #b80020 100%) !important;
+    box-shadow: 0 6px 22px rgba(235, 0, 41, 0.5) !important;
+    transform: translateY(-2px) !important;
+    color: #ffffff !important;
 }
 
 /* Legible placeholders */
