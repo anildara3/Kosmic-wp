@@ -79,14 +79,14 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
                                     <div class="badge-num"><?php echo esc_html($num); ?></div>
                                 </div>
 
-                                <div class="d-flex flex-wrap gap-2 mb-15">
-                                    <?php if (!empty($badge)) : ?>
+                                <!-- <div class="d-flex flex-wrap gap-2 mb-15">
+                                    <//?php if (!empty($badge)) : ?>
                                         <span class="badge" style="background-color: #EB0029; font-size: 11px; padding: 5px 10px; border-radius: 6px;"><?php echo esc_html($badge); ?></span>
-                                    <?php endif; ?>
-                                    <?php if (!empty($fee)) : ?>
+                                    <//?php endif; ?>
+                                    <//?php if (!empty($fee)) : ?>
                                         <span class="badge" style="background-color: #6B2AE6; font-size: 11px; padding: 5px 10px; border-radius: 6px;"><?php echo esc_html($fee); ?></span>
-                                    <?php endif; ?>
-                                </div>
+                                    <//?php endif; ?>
+                                </div> -->
 
                                 <h3 class="box-title text-white mb-15" style="font-size: 22px;">
                                     <a href="<?php echo esc_url($link); ?>" class="text-white text-decoration-none"><?php the_title(); ?></a>
