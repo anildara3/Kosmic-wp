@@ -26916,7 +26916,7 @@ hr.style1 {
   margin-bottom: 60px;
 }
 .mt-n1 {
-  margin-top: -0.18rem;
+  margin-top: 6rem;
 }
 .mt-n2 {
   margin-top: -0.5rem;
@@ -28966,7 +28966,11 @@ body.light-mode .terms-card,
 body.light-mode .blog-card,
 body.light-mode .th-blog,
 body.light-mode .sidebar-area .widget,
-body.light-mode .gallery-card {
+body.light-mode .gallery-card,
+body.light-mode .counter-box-dark,
+body.light-mode .testi-card-dark,
+html.light-mode .counter-box-dark,
+html.light-mode .testi-card-dark {
     background: #ffffff !important;
     background-color: #ffffff !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
@@ -28980,13 +28984,18 @@ body.light-mode .team-card .box-title a,
 body.light-mode .team-card .box-title,
 body.light-mode .testi-card .box-title,
 body.light-mode .feature-card-dark h3,
+body.light-mode .feature-card-dark h4,
 body.light-mode .pricing-card-dark .box-title,
 body.light-mode .pricing-card-dark .price-value,
 body.light-mode .contact-info_title,
 body.light-mode .terms-card h3,
 body.light-mode .terms-card h4,
 body.light-mode .blog-card .blog-title a,
-body.light-mode .recent-post-title a {
+body.light-mode .recent-post-title a,
+body.light-mode .counter-number,
+body.light-mode .counter-number-val,
+html.light-mode .counter-number,
+html.light-mode .counter-number-val {
     color: #161921 !important;
 }
 
@@ -29000,7 +29009,9 @@ body.light-mode .feature-card-dark span,
 body.light-mode .pricing-card-dark ul li,
 body.light-mode .contact-info_text,
 body.light-mode .contact-info_text a,
-body.light-mode .blog-card .blog-text {
+body.light-mode .blog-card .blog-text,
+body.light-mode .counter-title,
+html.light-mode .counter-title {
     color: #525960 !important;
 }
 
@@ -29873,5 +29884,97 @@ body.light-mode .comment-card {
 body.light-mode .comment-card h5 {
     color: #161921 !important;
 }
+
+/* --------------------------------------------------------------------------
+   15. COUNTER BOXES, EXPERIENCE TAG & TESTIMONIALS LIGHT MODE OVERRIDES
+   -------------------------------------------------------------------------- */
+body.light-mode .counter-box-dark,
+html.light-mode .counter-box-dark {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .counter-box-dark:hover,
+html.light-mode .counter-box-dark:hover {
+    border-color: #6b2ae6 !important;
+    box-shadow: 0 14px 35px rgba(107, 42, 230, 0.12) !important;
+    transform: translateY(-5px);
+}
+
+body.light-mode .counter-box-dark .counter-number,
+body.light-mode .counter-number,
+body.light-mode .counter-number-val,
+html.light-mode .counter-box-dark .counter-number,
+html.light-mode .counter-number,
+html.light-mode .counter-number-val {
+    color: #161921 !important;
+}
+
+body.light-mode .counter-box-dark .counter-number .plus,
+body.light-mode .counter-number .plus,
+html.light-mode .counter-box-dark .counter-number .plus,
+html.light-mode .counter-number .plus {
+    color: #eb0029 !important;
+}
+
+body.light-mode .counter-box-dark .counter-title,
+body.light-mode .counter-title,
+html.light-mode .counter-box-dark .counter-title,
+html.light-mode .counter-title {
+    color: #525960 !important;
+    font-weight: 500;
+}
+
+.counter-number .plus.text-suffix {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* Experience Tag Badge on Founder Image (White text preserved on gradient) */
+body.light-mode .experience-tag,
+html.light-mode .experience-tag {
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-mode .experience-tag h3,
+body.light-mode .experience-tag p,
+html.light-mode .experience-tag h3,
+html.light-mode .experience-tag p {
+    color: #ffffff !important;
+}
+
+/* Testimonial Cards in Light Mode */
+body.light-mode .testi-card-dark,
+html.light-mode .testi-card-dark {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .testi-card-dark:hover,
+html.light-mode .testi-card-dark:hover {
+    border-color: #eb0029 !important;
+    box-shadow: 0 14px 30px rgba(235, 0, 41, 0.12) !important;
+    transform: translateY(-8px);
+}
+
+body.light-mode .testi-card-dark .testi-text {
+    color: #525960 !important;
+}
+
+body.light-mode .testi-card-dark .testi-name {
+    color: #161921 !important;
+}
+
+body.light-mode .testi-card-dark .testi-batch {
+    color: #6b2ae6 !important;
+}
+
 
 

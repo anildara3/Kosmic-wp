@@ -1860,5 +1860,97 @@ body.light-mode .gallery-card {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* ---------------------------------------------------------
+   COUNTER & MILESTONES BOXES - LIGHT MODE STYLES
+   --------------------------------------------------------- */
+body.light-mode .counter-box-dark,
+html.light-mode .counter-box-dark {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .counter-box-dark:hover,
+html.light-mode .counter-box-dark:hover {
+    border-color: #6b2ae6 !important;
+    box-shadow: 0 14px 35px rgba(107, 42, 230, 0.12) !important;
+    transform: translateY(-5px);
+}
+
+body.light-mode .counter-box-dark .counter-number,
+body.light-mode .counter-number,
+body.light-mode .counter-number-val,
+html.light-mode .counter-box-dark .counter-number,
+html.light-mode .counter-number,
+html.light-mode .counter-number-val {
+    color: #161921 !important;
+}
+
+body.light-mode .counter-box-dark .counter-number .plus,
+body.light-mode .counter-number .plus,
+html.light-mode .counter-box-dark .counter-number .plus,
+html.light-mode .counter-number .plus {
+    color: #eb0029 !important;
+}
+
+body.light-mode .counter-box-dark .counter-title,
+body.light-mode .counter-title,
+html.light-mode .counter-box-dark .counter-title,
+html.light-mode .counter-title {
+    color: #525960 !important;
+    font-weight: 500;
+}
+
+.counter-number .plus.text-suffix {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* Experience Tag Badge on Founder Image (White text preserved on gradient) */
+body.light-mode .experience-tag,
+html.light-mode .experience-tag {
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-mode .experience-tag h3,
+body.light-mode .experience-tag p,
+html.light-mode .experience-tag h3,
+html.light-mode .experience-tag p {
+    color: #ffffff !important;
+}
+
+/* Testimonial Cards in Light Mode */
+body.light-mode .testi-card-dark,
+html.light-mode .testi-card-dark {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .testi-card-dark:hover,
+html.light-mode .testi-card-dark:hover {
+    border-color: #eb0029 !important;
+    box-shadow: 0 14px 30px rgba(235, 0, 41, 0.12) !important;
+    transform: translateY(-8px);
+}
+
+body.light-mode .testi-card-dark .testi-text {
+    color: #525960 !important;
+}
+
+body.light-mode .testi-card-dark .testi-name {
+    color: #161921 !important;
+}
+
+body.light-mode .testi-card-dark .testi-batch {
+    color: #6b2ae6 !important;
+}
+
+
 
 

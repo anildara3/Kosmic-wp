@@ -30,6 +30,27 @@ $stat3_lbl = get_field('stat3_label') ?: 'Tollywood & Hindi Film Projects';
 $stat4_num = get_field('stat4_number') ?: '2 Studios';
 $stat4_lbl = get_field('stat4_label') ?: 'Secunderabad & Hyderabad';
 
+if (!function_exists('kosmic_parse_stat')) {
+    function kosmic_parse_stat($val, $fallback_num = '0', $fallback_sfx = '') {
+        $val = trim((string)$val);
+        if ($val === '') {
+            return ['num' => $fallback_num, 'suffix' => $fallback_sfx];
+        }
+        if (preg_match('/^([0-9,]+(?:\.[0-9]+)?)\s*(.*)$/', $val, $matches)) {
+            return [
+                'num'    => $matches[1],
+                'suffix' => $matches[2]
+            ];
+        }
+        return ['num' => $val, 'suffix' => ''];
+    }
+}
+
+$s1 = kosmic_parse_stat($stat1_num, '15', '+');
+$s2 = kosmic_parse_stat($stat2_num, '3000', '+');
+$s3 = kosmic_parse_stat($stat3_num, '40', '+');
+$s4 = kosmic_parse_stat($stat4_num, '2', ' Studios');
+
 $contact_url  = kosmic_page_url('contact-us', '/contact');
 $services_url = kosmic_page_url('services-programs', '/services');
 ?>
@@ -129,7 +150,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
             <div class="col-md-6 col-lg-3">
                 <div class="counter-box-dark">
                     <div class="counter-number">
-                        <span class="counter-number-val"><?php echo esc_html($stat1_num); ?></span>
+                        <span class="counter-number-val" data-counter-target="<?php echo esc_attr($s1['num']); ?>"><?php echo esc_html($s1['num']); ?></span><?php if (!empty($s1['suffix'])) : ?><span class="plus<?php echo strlen(trim($s1['suffix'])) > 1 ? ' text-suffix' : ''; ?>"><?php echo esc_html($s1['suffix']); ?></span><?php endif; ?>
                     </div>
                     <p class="counter-title"><?php echo esc_html($stat1_lbl); ?></p>
                 </div>
@@ -137,7 +158,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
             <div class="col-md-6 col-lg-3">
                 <div class="counter-box-dark">
                     <div class="counter-number">
-                        <span class="counter-number-val"><?php echo esc_html($stat2_num); ?></span>
+                        <span class="counter-number-val" data-counter-target="<?php echo esc_attr($s2['num']); ?>"><?php echo esc_html($s2['num']); ?></span><?php if (!empty($s2['suffix'])) : ?><span class="plus<?php echo strlen(trim($s2['suffix'])) > 1 ? ' text-suffix' : ''; ?>"><?php echo esc_html($s2['suffix']); ?></span><?php endif; ?>
                     </div>
                     <p class="counter-title"><?php echo esc_html($stat2_lbl); ?></p>
                 </div>
@@ -145,7 +166,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
             <div class="col-md-6 col-lg-3">
                 <div class="counter-box-dark">
                     <div class="counter-number">
-                        <span class="counter-number-val"><?php echo esc_html($stat3_num); ?></span>
+                        <span class="counter-number-val" data-counter-target="<?php echo esc_attr($s3['num']); ?>"><?php echo esc_html($s3['num']); ?></span><?php if (!empty($s3['suffix'])) : ?><span class="plus<?php echo strlen(trim($s3['suffix'])) > 1 ? ' text-suffix' : ''; ?>"><?php echo esc_html($s3['suffix']); ?></span><?php endif; ?>
                     </div>
                     <p class="counter-title"><?php echo esc_html($stat3_lbl); ?></p>
                 </div>
@@ -153,7 +174,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
             <div class="col-md-6 col-lg-3">
                 <div class="counter-box-dark">
                     <div class="counter-number">
-                        <span class="counter-number-val"><?php echo esc_html($stat4_num); ?></span>
+                        <span class="counter-number-val" data-counter-target="<?php echo esc_attr($s4['num']); ?>"><?php echo esc_html($s4['num']); ?></span><?php if (!empty($s4['suffix'])) : ?><span class="plus<?php echo strlen(trim($s4['suffix'])) > 1 ? ' text-suffix' : ''; ?>"><?php echo esc_html($s4['suffix']); ?></span><?php endif; ?>
                     </div>
                     <p class="counter-title"><?php echo esc_html($stat4_lbl); ?></p>
                 </div>
