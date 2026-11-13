@@ -7434,7 +7434,7 @@ a.text-theme:hover,
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  gap: 70px;
+  gap: 50px;
 }
 @media (max-width: 1500px) {
   .th-social-wrapper {
@@ -29128,7 +29128,7 @@ body.light-mode #contact-sec select:focus {
 
 /* Submit Buttons in Light Mode */
 body.light-mode input[type="submit"],
-body.light-mode button[type="submit"],
+body.light-mode button[type="submit"]:not(.search-box-widget button):not(.searchBoxToggler):not(.theme-mode-toggler),
 body.light-mode .wpcf7 input[type="submit"],
 body.light-mode .wpcf7 .wpcf7-submit,
 body.light-mode .wpcf7 button[type="submit"],
@@ -29162,7 +29162,7 @@ body.light-mode .input-form input[type="submit"] {
 }
 
 body.light-mode input[type="submit"]:hover,
-body.light-mode button[type="submit"]:hover,
+body.light-mode button[type="submit"]:not(.search-box-widget button):not(.searchBoxToggler):not(.theme-mode-toggler):hover,
 body.light-mode .wpcf7 input[type="submit"]:hover,
 body.light-mode .wpcf7 .wpcf7-submit:hover,
 body.light-mode .wpcf7 button[type="submit"]:hover,
@@ -29975,6 +29975,351 @@ body.light-mode .testi-card-dark .testi-name {
 body.light-mode .testi-card-dark .testi-batch {
     color: #6b2ae6 !important;
 }
+
+/* =========================================================
+   SEARCH ARTICLES WIDGET (BLOG LIST & SIDEBAR)
+   Pixel-perfect styling matching the user's reference design
+   ========================================================= */
+
+/* The Card Container in Light Mode */
+body.light-mode .widget-card-dark.widget_search_card,
+body.light-mode .sidebar-area .widget-card-dark:first-child,
+.widget-card-dark.widget_search_card {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 26px 24px 26px 24px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    margin-bottom: 30px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* The Title: Search Articles */
+body.light-mode .widget-card-dark.widget_search_card .widget-title-dark,
+body.light-mode .sidebar-area .widget-card-dark:first-child .widget-title-dark,
+body.light-mode .widget-card-dark .widget-title-dark,
+body.light-mode .widget-title-dark {
+    color: #161921 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin: 0 0 18px 0 !important;
+    padding-bottom: 14px !important;
+    border-bottom: 2px solid #EEE4FC !important;
+    position: relative !important;
+}
+
+/* The Search Form Wrapper */
+.search-box-widget,
+body.light-mode .search-box-widget {
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Search Input Field */
+.search-box-widget input,
+body.light-mode .search-box-widget input,
+html.light-mode .search-box-widget input {
+    width: 100% !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    line-height: 48px !important;
+    background: #fafaff !important;
+    background-color: #fafaff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    padding: 0 46px 0 16px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #161921 !important;
+    -webkit-text-fill-color: #161921 !important;
+    box-shadow: none !important;
+    transition: all 0.25s ease-in-out !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+/* Placeholder */
+.search-box-widget input::placeholder,
+body.light-mode .search-box-widget input::placeholder,
+html.light-mode .search-box-widget input::placeholder {
+    color: #94a3b8 !important;
+    -webkit-text-fill-color: #94a3b8 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    opacity: 1 !important;
+}
+
+/* Focus State */
+.search-box-widget input:focus,
+body.light-mode .search-box-widget input:focus,
+html.light-mode .search-box-widget input:focus {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border-color: #6B2AE6 !important;
+    box-shadow: 0 0 0 3px rgba(107, 42, 230, 0.12) !important;
+    color: #161921 !important;
+    -webkit-text-fill-color: #161921 !important;
+    outline: none !important;
+}
+
+/* Search Button & Magnifying Glass Icon */
+.search-box-widget button,
+body.light-mode .search-box-widget button,
+html.light-mode .search-box-widget button,
+body.light-mode .search-box-widget button[type="submit"],
+html.light-mode .search-box-widget button[type="submit"],
+body:not(.light-mode) .search-box-widget button {
+    position: absolute !important;
+    top: 50% !important;
+    right: 14px !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 2 !important;
+    border-radius: 0 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    transition: all 0.25s ease !important;
+}
+
+/* Search Icon inside the button */
+.search-box-widget button i,
+body.light-mode .search-box-widget button i,
+html.light-mode .search-box-widget button i {
+    color: #EB0029 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    transition: color 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Hover State */
+.search-box-widget button:hover,
+body.light-mode .search-box-widget button:hover,
+body.light-mode .search-box-widget button[type="submit"]:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.search-box-widget button:hover i,
+body.light-mode .search-box-widget button:hover i {
+    color: #6B2AE6 !important;
+    transform: scale(1.12) !important;
+}
+
+/* =========================================================
+   SERVICES & PROGRAMS PAGE FIXES
+   ========================================================= */
+
+/* Service Icon Box & Hover Invert Effect */
+.service-icon-box {
+    transition: all 0.4s ease !important;
+}
+
+.service-icon-box img {
+    transition: all 0.4s ease !important;
+}
+
+.service-card-item:hover .service-icon-box {
+    background: #EB0029 !important;
+    transform: rotateY(180deg) !important;
+}
+
+.service-card-item:hover .service-icon-box img {
+    filter: brightness(0) invert(1) !important;
+    transform: rotateY(180deg) !important;
+}
+
+body.light-mode .service-card-item .service-icon-box {
+    background: linear-gradient(135deg, rgba(107, 42, 230, 0.12) 0%, rgba(235, 0, 41, 0.12) 100%) !important;
+    border: 1px solid rgba(107, 42, 230, 0.18) !important;
+}
+
+body.light-mode .service-card-item:hover .service-icon-box {
+    background: #EB0029 !important;
+    border-color: #EB0029 !important;
+    box-shadow: 0 8px 20px rgba(235, 0, 41, 0.35) !important;
+    transform: rotateY(180deg) !important;
+}
+
+body.light-mode .service-card-item:hover .service-icon-box img {
+    filter: brightness(0) invert(1) !important;
+    transform: rotateY(180deg) !important;
+}
+
+body.light-mode .service-card-item:hover .box-title a {
+    color: #6B2AE6 !important;
+}
+
+/* Book Free Trial Class Box */
+.cta-trial-box {
+    background: rgba(22, 25, 33, 0.9);
+    border-radius: 16px;
+    border: 1px solid rgba(235, 0, 41, 0.4);
+    transition: all 0.3s ease;
+}
+
+body.light-mode .cta-trial-box,
+html.light-mode .cta-trial-box {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(235, 0, 41, 0.35) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .cta-trial-box .trial-box-title,
+body.light-mode .cta-trial-box h3,
+body.light-mode .cta-trial-box h3.text-white {
+    color: #161921 !important;
+}
+
+body.light-mode .cta-trial-box .trial-box-desc,
+body.light-mode .cta-trial-box p,
+body.light-mode .cta-trial-box p.text-white-50 {
+    color: #525960 !important;
+}
+
+body.light-mode .cta-trial-box .th-btn.white-btn {
+    background-color: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #161921 !important;
+}
+
+body.light-mode .cta-trial-box .th-btn.white-btn:hover {
+    background-color: #25D366 !important;
+    border-color: #25D366 !important;
+    color: #ffffff !important;
+}
+
+/* Studio Locations Cards */
+.service-branch-card {
+    border: 1px solid rgba(107, 42, 230, 0.4);
+    border-radius: 16px;
+    background: rgba(26, 30, 40, 0.9);
+    transition: all 0.3s ease;
+}
+
+.service-branch-card:hover {
+    border-color: #6B2AE6;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(107, 42, 230, 0.2);
+}
+
+body.light-mode .service-branch-card,
+html.light-mode .service-branch-card {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(107, 42, 230, 0.2) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .service-branch-card:hover,
+html.light-mode .service-branch-card:hover {
+    border-color: #6B2AE6 !important;
+    box-shadow: 0 14px 35px rgba(107, 42, 230, 0.12) !important;
+    transform: translateY(-4px) !important;
+}
+
+body.light-mode .service-branch-card h3,
+body.light-mode .service-branch-card h3.text-white {
+    color: #161921 !important;
+}
+
+body.light-mode .service-branch-card p,
+body.light-mode .service-branch-card p.text-white-50 {
+    color: #525960 !important;
+}
+
+body.light-mode .service-branch-card p.text-white {
+    color: #161921 !important;
+    font-weight: 600 !important;
+}
+
+/* =========================================================
+   ABOUT PAGE REFINEMENTS
+   1. Counter Section: Single-line labels
+   2. Why Kosmic Studio: Single-line card titles & clean padding
+   ========================================================= */
+
+/* Counter Section */
+.counter-box-dark {
+    padding: 30px 10px !important;
+}
+
+.counter-box-dark .counter-title,
+.counter-title {
+    font-size: 14px !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.2px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .counter-box-dark .counter-title,
+    .counter-title {
+        font-size: 12.5px !important;
+        letter-spacing: -0.4px !important;
+    }
+}
+
+/* Why Kosmic Studio Cards */
+.why-kosmic-card {
+    padding: 35px 15px !important;
+}
+
+.why-kosmic-card .feature-card-title,
+.why-kosmic-card h4 {
+    font-size: 18px !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.2px !important;
+    line-height: 1.3 !important;
+}
+
+body.light-mode .why-kosmic-card .feature-card-title,
+html.light-mode .why-kosmic-card .feature-card-title {
+    color: #161921 !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .why-kosmic-card {
+        padding: 35px 10px !important;
+    }
+    .why-kosmic-card .feature-card-title,
+    .why-kosmic-card h4 {
+        font-size: 15.5px !important;
+        letter-spacing: -0.4px !important;
+    }
+}
+
+
+
 
 
 

@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 ?>
 <aside class="sidebar-area">
     <!-- 1. Search Widget -->
-    <div class="widget-card-dark">
+    <div class="widget-card-dark widget_search_card">
         <h4 class="widget-title-dark"><?php esc_html_e('Search Articles', 'kosmic'); ?></h4>
         <form class="search-box-widget" method="get" action="<?php echo esc_url(home_url('/')); ?>">
             <input type="text" name="s" placeholder="<?php esc_attr_e('Search keywords...', 'kosmic'); ?>" value="<?php echo esc_attr(get_search_query()); ?>">

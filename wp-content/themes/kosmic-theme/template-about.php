@@ -193,38 +193,38 @@ $services_url = kosmic_page_url('services-programs', '/services');
         </div>
         <div class="row gy-4">
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card-dark text-center">
+                <div class="feature-card-dark why-kosmic-card text-center">
                     <div style="font-size: 38px; color: #EB0029; margin-bottom: 20px;"> 
                         <i class="fa-solid fa-film"></i>
                     </div>
-                    <h4 class="text-white mb-2" style="font-size: 20px;">Tollywood Pedagogy</h4>
+                    <h4 class="feature-card-title text-white mb-2">Tollywood Pedagogy</h4>
                     <p class="text-white-50" style="font-size: 14px;">Learn authentic choreography styles from Lawrence Master's protégé with real cinematic musicality and footwork.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card-dark text-center">
+                <div class="feature-card-dark why-kosmic-card text-center">
                     <div style="font-size: 38px; color: #6B2AE6; margin-bottom: 20px;">
                         <i class="fa-solid fa-heart-pulse"></i>
                     </div>
-                    <h4 class="text-white mb-2" style="font-size: 20px;">5-Days-5-Variation</h4>
+                    <h4 class="feature-card-title text-white mb-2">5-Days-5-Variation</h4>
                     <p class="text-white-50" style="font-size: 14px;">A proprietary fitness system combining Zumba, Aerobics, Tabata, Bollywood cardio, and Power Yoga for rapid, healthy weight loss.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card-dark text-center">
-                    <div style="font-size: 38px; color: #EB0029; margin-bottom: 20px;">
-                        <i class="fa-solid fa-child-reaching"></i>
+                <div class="feature-card-dark why-kosmic-card text-center">
+                    <div style="font-size: 38px; color: #EB0029; margin-bottom: 20px;"> 
+                        <i class="fa-solid fa-child"></i>
                     </div>
-                    <h4 class="text-white mb-2" style="font-size: 20px;">Acrobatics &amp; Kids Care</h4>
+                    <h4 class="feature-card-title text-white mb-2">Acrobatics &amp; Kids Care</h4>
                     <p class="text-white-50" style="font-size: 14px;">Dedicated gymnastics and rhythm batches for children aged 4+ with patient, certified instructors building posture and flexibility.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card-dark text-center">
+                <div class="feature-card-dark why-kosmic-card text-center">
                     <div style="font-size: 38px; color: #6B2AE6; margin-bottom: 20px;">
                         <i class="fa-solid fa-music"></i>
                     </div>
-                    <h4 class="text-white mb-2" style="font-size: 20px;">Complete Arts Academy</h4>
+                    <h4 class="feature-card-title text-white mb-2">Complete Arts Academy</h4>
                     <p class="text-white-50" style="font-size: 14px;">Beyond dance: Carnatic vocal, Veena, Western Keyboard, Guitar, Drawing, and Abacus all under one air-conditioned roof.</p>
                 </div>
             </div>

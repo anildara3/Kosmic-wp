@@ -30,8 +30,8 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
     </div>
 </div>
 
-<!-- Section Intro -->
-<section class="space-top bg-dark">
+<!-- Services Grid Section with Integrated Intro (Dynamic from CPT: service) -->
+<section class="space bg-dark" id="service-grid">
     <div class="container">
         <div class="title-area text-center mb-50">
             <span class="sub-title style1">★ Top-Rated Academy in Hyderabad &amp; Secunderabad</span>
@@ -40,12 +40,6 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
                 Whether you want to learn high-energy Tollywood choreography, lose weight with our signature 5-Days-5-Variation Zumba workouts, master Kuchipudi classical mudras, or nurture your child's gymnastic flexibility &amp; mental math speed, Kosmic Studio 4 Danz provides personalized attention in fully air-conditioned studios.
             </p>
         </div>
-    </div>
-</section>
-
-<!-- Services Grid Section (Dynamic from CPT: service) -->
-<section class="space bg-dark" id="service-grid">
-    <div class="container">
         <div class="row gy-4">
             <?php
             $services_query = new WP_Query(array(
@@ -130,9 +124,9 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
                     </div>
                 </div>
                 <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                    <div class="p-4" style="background: rgba(22, 25, 33, 0.9); border-radius: 16px; border: 1px solid rgba(235, 0, 41, 0.4);">
-                        <h3 class="text-white mb-10" style="font-size: 22px;">Book Free Trial Class</h3>
-                        <p class="text-white-50 mb-20" style="font-size: 14px;">Speak directly with Mahesh Master and our instructors.</p>
+                    <div class="cta-trial-box p-4">
+                        <h3 class="trial-box-title text-white mb-10" style="font-size: 22px;">Book Free Trial Class</h3>
+                        <p class="trial-box-desc text-white-50 mb-20" style="font-size: 14px;">Speak directly with Mahesh Master and our instructors.</p>
                         <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone1)); ?>" class="th-btn red-btn w-100 mb-2"><i class="fa-solid fa-phone me-2"></i>Call: <?php echo esc_html($phone1); ?></a>
                         <a href="https://wa.me/<?php echo esc_attr($whatsapp); ?>" target="_blank" rel="noopener" class="th-btn white-btn w-100"><i class="fab fa-whatsapp me-2"></i>WhatsApp Us</a>
                     </div>
@@ -151,7 +145,7 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
         </div>
         <div class="row gy-4 justify-content-center">
             <div class="col-lg-6">
-                <div class="p-4" style="border: 1px solid rgba(107, 42, 230, 0.4); border-radius: 16px; background: rgba(26, 30, 40, 0.9);">
+                <div class="service-branch-card p-4">
                     <div class="d-flex align-items-center mb-20">
                         <i class="fa-solid fa-location-dot fs-2 text-warning me-3"></i>
                         <div>
@@ -169,7 +163,7 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="p-4" style="border: 1px solid rgba(107, 42, 230, 0.4); border-radius: 16px; background: rgba(26, 30, 40, 0.9);">
+                <div class="service-branch-card p-4">
                     <div class="d-flex align-items-center mb-20">
                         <i class="fa-solid fa-location-dot fs-2 text-warning me-3"></i>
                         <div>
