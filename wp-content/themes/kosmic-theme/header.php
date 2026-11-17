@@ -147,12 +147,12 @@ $logo_url = $custom_logo_id ? wp_get_attachment_image_url($custom_logo_id, 'full
 
         <!-- Popup Search Box -->
         <div class="popup-search-box style3 d-none d-lg-block">
-            <button class="searchClose">
+            <button type="button" class="searchClose" aria-label="<?php esc_attr_e('Close Search', 'kosmic'); ?>">
                 <i class="fal fa-times"></i>
             </button>
             <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
                 <input type="text" name="s" placeholder="<?php esc_attr_e('Search dance styles, fitness, yoga, music...', 'kosmic'); ?>" value="<?php echo get_search_query(); ?>">
-                <button type="submit"><i class="fal fa-search"></i></button>
+                <button type="submit" class="popup-search-submit" aria-label="<?php esc_attr_e('Submit Search', 'kosmic'); ?>"><i class="fal fa-search"></i></button>
             </form>
         </div>
 

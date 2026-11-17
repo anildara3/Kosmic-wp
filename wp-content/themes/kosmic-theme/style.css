@@ -600,7 +600,7 @@ body.light-mode .wpcf7 form p > label {
 }
 
 /* All inputs, textareas, and selects in Light Mode */
-body.light-mode input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn),
+body.light-mode input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not(.th-btn):not(.btn):not(.adminbar-input),
 body.light-mode textarea,
 body.light-mode select,
 body.light-mode .form-control,
@@ -659,7 +659,7 @@ body.light-mode input.style2 {
 }
 
 /* Active focus state */
-body.light-mode input:not([type="submit"]):not([type="button"]):focus,
+body.light-mode input:not([type="submit"]):not([type="button"]):not(.adminbar-input):focus,
 body.light-mode textarea:focus,
 body.light-mode select:focus,
 body.light-mode .form-control:focus,
@@ -681,8 +681,8 @@ body.light-mode #contact-sec select:focus {
 }
 
 /* Submit Buttons in Light Mode */
-body.light-mode input[type="submit"],
-body.light-mode button[type="submit"]:not(.search-box-widget button):not(.searchBoxToggler):not(.theme-mode-toggler),
+body.light-mode input[type="submit"]:not(.adminbar-button),
+body.light-mode button[type="submit"]:not(.search-box-widget button):not(.searchBoxToggler):not(.theme-mode-toggler):not(.popup-search-submit),
 body.light-mode .wpcf7 input[type="submit"],
 body.light-mode .wpcf7 .wpcf7-submit,
 body.light-mode .wpcf7 button[type="submit"],
@@ -715,8 +715,8 @@ body.light-mode .input-form input[type="submit"] {
     margin-top: 10px !important;
 }
 
-body.light-mode input[type="submit"]:hover,
-body.light-mode button[type="submit"]:not(.search-box-widget button):not(.searchBoxToggler):not(.theme-mode-toggler):hover,
+body.light-mode input[type="submit"]:not(.adminbar-button):hover,
+body.light-mode button[type="submit"]:not(.search-box-widget button):not(.searchBoxToggler):not(.theme-mode-toggler):not(.popup-search-submit):hover,
 body.light-mode .wpcf7 input[type="submit"]:hover,
 body.light-mode .wpcf7 .wpcf7-submit:hover,
 body.light-mode .wpcf7 button[type="submit"]:hover,
@@ -733,6 +733,33 @@ body.light-mode .input-form input[type="submit"]:hover {
     box-shadow: 0 6px 22px rgba(235, 0, 41, 0.5) !important;
     transform: translateY(-2px) !important;
     color: #ffffff !important;
+}
+
+/* Protect WordPress Admin Bar Search from Light Mode Form Overrides */
+#wpadminbar #adminbarsearch .adminbar-button,
+body.light-mode #wpadminbar #adminbarsearch .adminbar-button,
+html.light-mode #wpadminbar #adminbarsearch .adminbar-button {
+    display: none !important;
+}
+
+#wpadminbar #adminbarsearch .adminbar-input,
+body.light-mode #wpadminbar #adminbarsearch .adminbar-input,
+html.light-mode #wpadminbar #adminbarsearch .adminbar-input {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #c3c4c7 !important;
+    -webkit-text-fill-color: #c3c4c7 !important;
+}
+
+#wpadminbar #adminbarsearch .adminbar-input:focus,
+body.light-mode #wpadminbar #adminbarsearch .adminbar-input:focus,
+html.light-mode #wpadminbar #adminbarsearch .adminbar-input:focus {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
 }
 
 /* Legible placeholders */
@@ -854,7 +881,7 @@ body.light-mode .th-btn.white-btn {
 
 body.light-mode .th-btn.white-btn:hover {
     background-color: #eb0029 !important;
-    color: #ffffff !important;
+    color: #000000 !important;
     border-color: #eb0029 !important;
 }
 
@@ -2289,6 +2316,147 @@ html.light-mode .why-kosmic-card .feature-card-title {
         letter-spacing: -0.4px !important;
     }
 }
+
+/* =========================================================
+   POPUP SEARCH BOX (HEADER SEARCH OVERLAY)
+   Clean alignment in Dark Mode & dedicated Light Mode styling
+   ========================================================= */
+.popup-search-box {
+    z-index: 999999 !important;
+}
+
+.popup-search-box form {
+    padding-bottom: 0 !important;
+}
+
+.popup-search-box form input {
+    height: 66px !important;
+    padding: 0 74px 0 28px !important;
+    border-radius: 16px !important;
+    font-size: 17px !important;
+}
+
+.popup-search-box form button,
+.popup-search-box form button[type="submit"],
+.popup-search-box form button.popup-search-submit {
+    position: absolute !important;
+    top: 50% !important;
+    right: 10px !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: translateY(-50%) !important;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    z-index: 2 !important;
+    transition: all 0.25s ease !important;
+}
+
+.popup-search-box form button:hover,
+.popup-search-box form button[type="submit"]:hover,
+.popup-search-box form button.popup-search-submit:hover {
+    background: rgba(107, 42, 230, 0.2) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    color: #EB0029 !important;
+    transform: translateY(-50%) scale(1.06) !important;
+}
+
+/* Light Mode Popup Search Box */
+body.light-mode .popup-search-box,
+html.light-mode .popup-search-box {
+    background-color: rgba(248, 250, 252, 0.96) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+body.light-mode .popup-search-box button.searchClose,
+html.light-mode .popup-search-box button.searchClose {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #161921 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .popup-search-box button.searchClose:hover,
+html.light-mode .popup-search-box button.searchClose:hover {
+    background-color: #EB0029 !important;
+    border-color: #EB0029 !important;
+    color: #ffffff !important;
+}
+
+body.light-mode .popup-search-box form input,
+html.light-mode .popup-search-box form input {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 2px solid #6B2AE6 !important;
+    border-radius: 16px !important;
+    color: #161921 !important;
+    -webkit-text-fill-color: #161921 !important;
+    box-shadow: 0 12px 35px rgba(107, 42, 230, 0.14) !important;
+}
+
+body.light-mode .popup-search-box form input:focus,
+html.light-mode .popup-search-box form input:focus {
+    background-color: #ffffff !important;
+    border-color: #6B2AE6 !important;
+    box-shadow: 0 0 0 4px rgba(107, 42, 230, 0.16), 0 12px 35px rgba(107, 42, 230, 0.14) !important;
+}
+
+body.light-mode .popup-search-box form input::placeholder,
+html.light-mode .popup-search-box form input::placeholder {
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+    opacity: 1 !important;
+}
+
+body.light-mode .popup-search-box form button,
+body.light-mode .popup-search-box form button[type="submit"],
+body.light-mode .popup-search-box form button.popup-search-submit,
+html.light-mode .popup-search-box form button,
+html.light-mode .popup-search-box form button[type="submit"],
+html.light-mode .popup-search-box form button.popup-search-submit {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #6B2AE6 !important;
+}
+
+body.light-mode .popup-search-box form button:hover,
+body.light-mode .popup-search-box form button[type="submit"]:hover,
+body.light-mode .popup-search-box form button.popup-search-submit:hover,
+html.light-mode .popup-search-box form button:hover,
+html.light-mode .popup-search-box form button[type="submit"]:hover,
+html.light-mode .popup-search-box form button.popup-search-submit:hover {
+    background: rgba(107, 42, 230, 0.1) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    color: #EB0029 !important;
+    transform: translateY(-50%) scale(1.06) !important;
+}
+
 
 
 

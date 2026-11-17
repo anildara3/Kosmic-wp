@@ -56,10 +56,6 @@ get_header();
                             <li><i class="fal fa-comment"></i> <?php comments_number(__('0 Comments', 'kosmic'), __('1 Comment', 'kosmic'), __('% Comments', 'kosmic')); ?></li>
                         </ul>
 
-                        <h2 class="blog-single-title text-white mb-25" style="font-size: 32px; font-weight: 800; line-height: 1.35;">
-                            <?php the_title(); ?>
-                        </h2>
-
                         <div class="entry-content text-white-50" style="font-size: 16px; line-height: 1.8;">
                             <?php the_content(); ?>
                         </div>
