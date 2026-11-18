@@ -30486,6 +30486,70 @@ html.light-mode .popup-search-box form button.popup-search-submit:hover {
 }
 
 
+/* =========================================================
+   CTA BUTTONS MOBILE FIX (CALL & WHATSAPP)
+   ========================================================= */
+@media (max-width: 991px) {
+    /* 1. Force the container to stack the buttons up and down */
+    .cta-btn2 {
+        display: flex !important;
+        flex-direction: column !important; /* Stacks them vertically */
+        gap: 15px !important; /* THIS CREATES THE GAP BETWEEN THE BUTTONS */
+        align-items: flex-start !important; /* Aligns them to the left */
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    /* 2. Fix the button width and stop the text from breaking into two lines */
+    .cta-btn2 .th-btn {
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important; /* Makes the button stretch to fill the space */
+        max-width: 350px !important; /* Prevents them from getting too wide on tablets */
+        margin: 0 !important; /* Removes default margins that cause overlap */
+        white-space: nowrap !important; /* THIS STOPS THE TEXT FROM WRAPPING */
+        padding: 15px 20px !important;
+    }
+}
+
+
+/* =========================================================
+   RECENT POSTS FULL WIDTH FIX
+   ========================================================= */
+
+/* 1. Force the parent container to use flexbox properly */
+.widget .recent-post, 
+.recent-post-wrap .recent-post,
+.widget_recent_entries li {
+    display: flex !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+}
+
+/* 2. Force the text container to expand and fill all available space */
+.widget .recent-post .media-body,
+.recent-post-wrap .media-body,
+.widget_recent_entries .media-body {
+    flex: 1 1 auto !important; /* Tells it to grow and take up remaining space */
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important; /* CRUCIAL: prevents flexbox from cutting off text */
+    padding-right: 0 !important; 
+}
+
+/* 3. Ensure the post title spans the full width of its container */
+.widget .recent-post .post-title,
+.recent-post-wrap .post-title,
+.widget_recent_entries .post-title,
+.widget .recent-post .post-title a {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    white-space: normal !important; /* Allows text to wrap naturally at the edge */
+    word-wrap: break-word !important; 
+}
 
 
 
