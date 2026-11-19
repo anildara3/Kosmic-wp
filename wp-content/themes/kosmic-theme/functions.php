@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 /**
  * Define Theme Constants
  */
-define('KOSMIC_VERSION', '1.2.6');
+define('KOSMIC_VERSION', '1.2.7');
 define('KOSMIC_DIR', get_template_directory());
 define('KOSMIC_URI', get_template_directory_uri());
 
@@ -170,6 +170,41 @@ function kosmic_excerpt_more($more) {
     return '...';
 }
 add_filter('excerpt_more', 'kosmic_excerpt_more');
+
+/**
+ * Helper to get Service Icon URL (Supports PNG, Media Library attachment, or theme assets)
+ */
+function kosmic_get_service_icon($post_id = null, $counter = 1) {
+    if (!$post_id) {
+        $post_id = get_the_ID();
+    }
+
+    $icon = function_exists('get_field') ? get_field('service_icon', $post_id) : null;
+
+    if (is_array($icon) && !empty($icon['url'])) {
+        return $icon['url'];
+    }
+    if (is_numeric($icon) && $icon > 0) {
+        $url = wp_get_attachment_image_url($icon, 'full');
+        if ($url) return $url;
+    }
+    if (is_string($icon) && trim($icon) !== '') {
+        return trim($icon);
+    }
+
+    $meta_icon = get_post_meta($post_id, 'service_icon', true);
+    if (is_numeric($meta_icon) && $meta_icon > 0) {
+        $url = wp_get_attachment_image_url($meta_icon, 'full');
+        if ($url) return $url;
+    }
+    if (is_string($meta_icon) && trim($meta_icon) !== '') {
+        return trim($meta_icon);
+    }
+
+    // Default to clean PNG icon
+    $idx = (($counter - 1) % 10) + 1;
+    return kosmic_asset('img/icon/service_1_' . $idx . '.png');
+}
 
 /**
  * Include Custom Post Types, Theme Options, ACF Fields, CF7 Setup, and Seeder

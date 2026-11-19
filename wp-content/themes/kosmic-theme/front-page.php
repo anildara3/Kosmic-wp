@@ -233,7 +233,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
                     $counter++;
                     $s_id     = get_the_ID();
                     $num      = get_field('service_number', $s_id) ?: get_post_meta($s_id, 'service_number', true) ?: sprintf('%02d', $counter);
-                    $icon     = get_field('service_icon', $s_id) ?: get_post_meta($s_id, 'service_icon', true) ?: kosmic_asset('img/icon/service_2_' . (($counter % 3) + 1) . '.svg');
+                    $icon     = kosmic_get_service_icon($s_id, $counter);
                     $subtitle = get_field('service_subtitle', $s_id) ?: get_post_meta($s_id, 'service_subtitle', true) ?: wp_trim_words(get_the_excerpt(), 18);
                     $link     = get_permalink();
             ?>
@@ -241,7 +241,7 @@ $services_url = kosmic_page_url('services-programs', '/services');
                         <div class="service-card">
                             <div class="service-card_inner">
                                 <div class="service-card_icon">
-                                    <img src="<?php echo esc_url($icon); ?>" alt="<?php the_title_attribute(); ?>" style="max-width: 44px; max-height: 44px;">
+                                    <img src="<?php echo esc_url($icon); ?>" alt="<?php the_title_attribute(); ?>" style="max-width: 48px; max-height: 48px;">
                                 </div>
                                 <div class="service-card_number" data-bg-src="<?php echo kosmic_asset('img/icon/service_1_1.jpg'); ?>"><?php echo esc_html($num); ?></div>
                             </div>

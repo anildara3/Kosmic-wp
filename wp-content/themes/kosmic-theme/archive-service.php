@@ -57,7 +57,7 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
                     $counter++;
                     $s_id     = get_the_ID();
                     $num      = get_field('service_number', $s_id) ?: get_post_meta($s_id, 'service_number', true) ?: sprintf('%02d', $counter);
-                    $icon     = get_field('service_icon', $s_id) ?: get_post_meta($s_id, 'service_icon', true) ?: kosmic_asset('img/icon/service_1_' . (($counter % 3) + 1) . '.svg');
+                    $icon     = kosmic_get_service_icon($s_id, $counter);
                     $subtitle = get_field('service_subtitle', $s_id) ?: get_post_meta($s_id, 'service_subtitle', true) ?: wp_trim_words(get_the_excerpt(), 18);
                     $badge    = get_field('service_badge', $s_id) ?: get_post_meta($s_id, 'service_badge', true);
                     $fee      = get_field('service_fee', $s_id) ?: get_post_meta($s_id, 'service_fee', true);
