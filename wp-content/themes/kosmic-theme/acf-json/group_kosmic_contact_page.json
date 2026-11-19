@@ -24,11 +24,31 @@
         },
         {
             "key": "field_contact_map_iframe",
-            "label": "Google Maps Embed URL",
+            "label": "Branch 1: Padmarao Nagar Map Embed URL",
             "name": "contact_map_iframe",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Paste the Google Maps embed src URL",
+            "instructions": "Paste the Google Maps embed src URL for Padmarao Nagar (optional override)",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_contact_map2_iframe",
+            "label": "Branch 2: Shivam Road Map Embed URL",
+            "name": "contact_map2_iframe",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Paste the Google Maps embed src URL for Shivam Road (optional override)",
             "required": false,
             "conditional_logic": false,
             "wrapper": {

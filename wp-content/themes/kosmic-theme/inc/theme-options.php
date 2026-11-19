@@ -41,7 +41,7 @@ function kosmic_sanitize_settings($input) {
     $sanitized = array();
     if (is_array($input)) {
         foreach ($input as $key => $value) {
-            if (in_array($key, array('branch1_map', 'branch2_map', 'footer_about_text'))) {
+            if (in_array($key, array('branch1_map', 'branch2_map', 'branch1_share_url', 'branch2_share_url', 'footer_about_text'))) {
                 $sanitized[$key] = wp_kses_post($value);
             } else {
                 $sanitized[$key] = sanitize_text_field($value);
@@ -81,9 +81,13 @@ function kosmic_get_option($key, $default = '') {
         'branch1_name'      => 'Padmarao Nagar Studio (Secunderabad)',
         'branch1_address'   => '6-1-289/7, 2nd Flr, Rd No 3, Above Ratnadeep, Secunderabad - 500025',
         'branch1_phone'     => '+91 97033 66311 / +91 95026 26988',
+        'branch1_map'       => 'https://maps.google.com/maps?q=Kosmic+Studio+4+Danz,+Padmarao+Nagar,+Secunderabad&t=&z=16&ie=UTF8&iwloc=&output=embed',
+        'branch1_share_url' => 'https://share.google/lXIBoCp1X0G6Sg652',
         'branch2_name'      => 'Shivam Road Branch (Hyderabad)',
         'branch2_address'   => '3rd Flr, MIG-80, Opp Union Bank, Bathukamma Kunta, DD Colony, Hyderabad - 500013',
         'branch2_phone'     => '+91 75698 16060 / +91 97033 66311',
+        'branch2_map'       => 'https://maps.google.com/maps?q=Kosmic+Studio+4+Danz,+Shivam+Road,+DD+Colony,+Hyderabad&t=&z=16&ie=UTF8&iwloc=&output=embed',
+        'branch2_share_url' => 'https://share.google/iSgAhoAlyU3e7h0qJ',
         'social_facebook'   => 'https://www.facebook.com/mahesh.chillaka',
         'social_instagram'  => 'https://www.instagram.com/kosmic_studio_4danz/?hl=en',
         'social_youtube'    => 'https://www.youtube.com/user/mahesh8maddy',
@@ -211,6 +215,20 @@ function kosmic_render_theme_options_page() {
                             <input type="text" name="kosmic_settings[branch1_phone]" id="branch1_phone" class="large-text" value="<?php echo esc_attr(kosmic_get_option('branch1_phone')); ?>">
                         </td>
                     </tr>
+                    <tr>
+                        <th scope="row"><label for="branch1_map"><?php esc_html_e('Branch 1 Google Maps Embed URL', 'kosmic'); ?></label></th>
+                        <td>
+                            <input type="text" name="kosmic_settings[branch1_map]" id="branch1_map" class="large-text" value="<?php echo esc_attr(kosmic_get_option('branch1_map')); ?>">
+                            <p class="description"><?php esc_html_e('Google Maps iframe embed URL for Branch 1.', 'kosmic'); ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="branch1_share_url"><?php esc_html_e('Branch 1 Google Maps Share Link', 'kosmic'); ?></label></th>
+                        <td>
+                            <input type="url" name="kosmic_settings[branch1_share_url]" id="branch1_share_url" class="large-text" value="<?php echo esc_attr(kosmic_get_option('branch1_share_url')); ?>">
+                            <p class="description"><?php esc_html_e('Direct share link e.g. https://share.google/lXIBoCp1X0G6Sg652', 'kosmic'); ?></p>
+                        </td>
+                    </tr>
                 </table>
 
                 <hr style="margin: 30px 0;">
@@ -233,6 +251,20 @@ function kosmic_render_theme_options_page() {
                         <th scope="row"><label for="branch2_phone"><?php esc_html_e('Branch 2 Phones', 'kosmic'); ?></label></th>
                         <td>
                             <input type="text" name="kosmic_settings[branch2_phone]" id="branch2_phone" class="large-text" value="<?php echo esc_attr(kosmic_get_option('branch2_phone')); ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="branch2_map"><?php esc_html_e('Branch 2 Google Maps Embed URL', 'kosmic'); ?></label></th>
+                        <td>
+                            <input type="text" name="kosmic_settings[branch2_map]" id="branch2_map" class="large-text" value="<?php echo esc_attr(kosmic_get_option('branch2_map')); ?>">
+                            <p class="description"><?php esc_html_e('Google Maps iframe embed URL for Branch 2.', 'kosmic'); ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="branch2_share_url"><?php esc_html_e('Branch 2 Google Maps Share Link', 'kosmic'); ?></label></th>
+                        <td>
+                            <input type="url" name="kosmic_settings[branch2_share_url]" id="branch2_share_url" class="large-text" value="<?php echo esc_attr(kosmic_get_option('branch2_share_url')); ?>">
+                            <p class="description"><?php esc_html_e('Direct share link e.g. https://share.google/iSgAhoAlyU3e7h0qJ', 'kosmic'); ?></p>
                         </td>
                     </tr>
                 </table>

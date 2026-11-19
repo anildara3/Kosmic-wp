@@ -18,7 +18,18 @@ $phone_shivam = kosmic_get_option('phone_shivam', '+91 75698 16060');
 $email        = kosmic_get_option('email_address', 'kosmicstudio4danz@gmail.com');
 $hours_w      = kosmic_get_option('hours_weekdays', 'Mon - Sat: 06:00 AM - 09:00 PM');
 $hours_s      = kosmic_get_option('hours_sundays', 'Sun: 07:00 AM - 01:00 PM (Special batches & master workshops)');
-$map_iframe   = get_field('contact_map_iframe') ?: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.666930263435!2d78.50854297493566!3d17.427771783466185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb998495031b29%3A0x7d6f58dfb6cf1b09!2sPadmarao%20Nagar%2C%20Secunderabad%2C%20Telangana%20500025!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin';
+
+$branch1_name    = kosmic_get_option('branch1_name', 'Padmarao Nagar Studio (Secunderabad)');
+$branch1_address = kosmic_get_option('branch1_address', '6-1-289/7, 2nd Flr, Rd No 3, Above Ratnadeep, Secunderabad - 500025');
+$branch1_phone   = kosmic_get_option('branch1_phone', '+91 97033 66311 / +91 95026 26988');
+$branch1_map     = get_field('contact_map1_iframe') ?: (get_field('contact_map_iframe') ?: kosmic_get_option('branch1_map'));
+$branch1_share   = kosmic_get_option('branch1_share_url', 'https://share.google/lXIBoCp1X0G6Sg652');
+
+$branch2_name    = kosmic_get_option('branch2_name', 'Shivam Road Branch (Hyderabad)');
+$branch2_address = kosmic_get_option('branch2_address', '3rd Flr, MIG-80, Opp Union Bank, Bathukamma Kunta, DD Colony, Hyderabad - 500013');
+$branch2_phone   = kosmic_get_option('branch2_phone', '+91 75698 16060 / +91 97033 66311');
+$branch2_map     = get_field('contact_map2_iframe') ?: kosmic_get_option('branch2_map');
+$branch2_share   = kosmic_get_option('branch2_share_url', 'https://share.google/iSgAhoAlyU3e7h0qJ');
 $cf7_override = get_field('contact_cf7_shortcode');
 $contact_sub   = get_field('contact_subtitle') ?: 'Get In Touch';
 $contact_title = get_field('contact_title') ?: "Let's Talk to Mahesh Master & Expert Team";
@@ -182,12 +193,57 @@ $contact_img   = get_field('contact_image') ?: kosmic_asset('img/normal/contact_
     </div>
 </div>
 
-<!-- Google Map Section (Dynamic Embed) -->
-<?php if (!empty($map_iframe)) : ?>
-<div class="map-sec">
-    <iframe src="<?php echo esc_url($map_iframe); ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
-<?php endif; ?>
+<!-- Google Maps - Dual Branch Locations (Dynamic from Studio Settings) -->
+<section class="space bg-dark" id="branch-maps-sec">
+    <div class="container">
+        <div class="title-area text-center mb-50">
+            <span class="sub-title style1">Our Locations</span>
+            <h2 class="sec-title text-white">Find Us On Google Maps</h2>
+            <p class="text-white-50" style="max-width: 650px; margin: 0 auto;">Visit our two fully air-conditioned studios in Secunderabad and Hyderabad. Get real-time directions or navigate directly to each branch below.</p>
+        </div>
+        <div class="row gy-4">
+            <!-- Branch 1: Padmarao Nagar Studio -->
+            <div class="col-lg-6">
+                <div class="feature-card-dark d-flex flex-column h-100">
+                    <div class="mb-3">
+                        <span class="text-white-50" style="font-size: 13px;"><i class="fa-solid fa-clock me-1 text-danger"></i> <?php echo esc_html($hours_w); ?></span>
+                    </div>
+                    <h3 class="text-white mb-2" style="font-size: 24px; font-weight: 700;"><?php echo esc_html($branch1_name); ?></h3>
+                    <p class="text-white-50 mb-2"><i class="fa-sharp fa-solid fa-location-dot me-2 text-danger"></i><?php echo esc_html($branch1_address); ?></p>
+                    <p class="text-white-50 mb-3"><i class="fa-solid fa-phone me-2 text-danger"></i>Phone: <?php echo esc_html($branch1_phone); ?></p>
+                    <div class="branch-map-embed mb-4" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <iframe src="<?php echo esc_url($branch1_map); ?>" width="100%" height="320" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="<?php echo esc_url($branch1_share); ?>" target="_blank" rel="noopener noreferrer" class="th-btn blue-btn w-100 text-center">
+                            <i class="fa-solid fa-diamond-turn-right me-2"></i>Open in Google Maps / Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branch 2: Shivam Road Branch -->
+            <div class="col-lg-6">
+                <div class="feature-card-dark d-flex flex-column h-100">
+                    <div class="mb-3">
+                        <span class="text-white-50" style="font-size: 13px;"><i class="fa-solid fa-clock me-1 text-info"></i> <?php echo esc_html($hours_w); ?></span>
+                    </div>
+                    <h3 class="text-white mb-2" style="font-size: 24px; font-weight: 700;"><?php echo esc_html($branch2_name); ?></h3>
+                    <p class="text-white-50 mb-2"><i class="fa-sharp fa-solid fa-location-dot me-2 text-info"></i><?php echo esc_html($branch2_address); ?></p>
+                    <p class="text-white-50 mb-3"><i class="fa-solid fa-phone me-2 text-info"></i>Phone: <?php echo esc_html($branch2_phone); ?></p>
+                    <div class="branch-map-embed mb-4" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <iframe src="<?php echo esc_url($branch2_map); ?>" width="100%" height="320" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="<?php echo esc_url($branch2_share); ?>" target="_blank" rel="noopener noreferrer" class="th-btn blue-btn w-100 text-center">
+                            <i class="fa-solid fa-diamond-turn-right me-2"></i>Open in Google Maps / Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php
 get_footer();
