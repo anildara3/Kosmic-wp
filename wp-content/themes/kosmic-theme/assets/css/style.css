@@ -30607,6 +30607,331 @@ html.light-mode .service-icon-box {
     transform: scale(1.08) !important;
 }
 
+/* =========================================================
+   HEADER RESPONSIVE FIX FOR LAPTOPS & DESKTOPS (HEADER-LAYOUT3)
+   Fixes header action buttons wrapping onto a second line on laptops
+   ========================================================= */
+
+/* 1. Header Container & Flex Row Alignment across all screens */
+.th-header.header-layout3 .menu-area .container,
+.th-header.header-layout3 .menu-area .header-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: clamp(15px, 2.5vw, 40px) !important;
+    padding-right: clamp(15px, 2.5vw, 40px) !important;
+}
+
+@media (min-width: 1600px) {
+    .th-header.header-layout3 .menu-area .container,
+    .th-header.header-layout3 .menu-area .header-container {
+        max-width: 1560px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.th-header.header-layout3 .menu-area .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Logo column & image */
+.th-header.header-layout3 .header-logo,
+.th-header.header-layout3 .header-col-logo {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-left: 0 !important;
+    min-width: max-content !important;
+}
+
+.th-header.header-layout3 .header-logo img,
+.th-header.header-layout3 .header-logo-img {
+    height: auto !important;
+    width: auto !important;
+    max-height: 52px !important;
+    object-fit: contain !important;
+    display: block !important;
+    transition: max-height 0.25s ease !important;
+}
+
+/* Header buttons & icons */
+.th-header.header-layout3 .header-button,
+.th-header.header-layout3 .header-col-buttons {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+    gap: 10px !important;
+    min-width: max-content !important;
+}
+
+/* Ensure all 3 action buttons stay visible on desktop and laptop (>= 992px) */
+@media (min-width: 992px) {
+    .th-header.header-layout3 .header-button .icon-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Main Navigation Menu */
+.th-header.header-layout3 .main-menu,
+.th-header.header-layout3 .header-col-menu {
+    flex-shrink: 1 !important;
+    white-space: nowrap !important;
+}
+
+.th-header.header-layout3 .main-menu > ul {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.th-header.header-layout3 .main-menu > ul > li {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+.th-header.header-layout3 .main-menu > ul > li > a {
+    white-space: nowrap !important;
+    display: block !important;
+    transition: color 0.3s ease, font-size 0.2s ease, padding 0.2s ease !important;
+}
+
+/* 2. Large Laptops / Small Desktops (1280px - 1499px, including 1366px & 1440px) */
+@media (min-width: 1280px) and (max-width: 1499px) {
+    .th-header.header-layout3 .main-menu > ul > li {
+        margin: 0 9px !important;
+    }
+    .th-header.header-layout3 .main-menu > ul > li > a {
+        font-size: 13.5px !important;
+        padding: 32px 0 !important;
+        letter-spacing: 0.2px !important;
+    }
+    .th-header.header-layout3 .header-logo img,
+    .th-header.header-layout3 .header-logo-img {
+        max-height: 46px !important;
+    }
+    .th-header.header-layout3 .header-button {
+        gap: 8px !important;
+    }
+    .th-header.header-layout3 .header-button .icon-btn {
+        width: 40px !important;
+        height: 40px !important;
+        line-height: 38px !important;
+        font-size: 13.5px !important;
+    }
+}
+
+/* 3. Medium Laptops / Small Displays (1100px - 1279px) */
+@media (min-width: 1100px) and (max-width: 1279px) {
+    .th-header.header-layout3 .main-menu > ul > li {
+        margin: 0 6px !important;
+    }
+    .th-header.header-layout3 .main-menu > ul > li > a {
+        font-size: 12.5px !important;
+        padding: 28px 0 !important;
+        letter-spacing: 0.1px !important;
+    }
+    .th-header.header-layout3 .header-logo img,
+    .th-header.header-layout3 .header-logo-img {
+        max-height: 42px !important;
+    }
+    .th-header.header-layout3 .header-button {
+        gap: 6px !important;
+    }
+    .th-header.header-layout3 .header-button .icon-btn {
+        width: 38px !important;
+        height: 38px !important;
+        line-height: 36px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* 4. Small Laptops / Tablet Landscape (992px - 1099px, including 1024px) */
+@media (min-width: 992px) and (max-width: 1099px) {
+    .th-header.header-layout3 .main-menu > ul > li {
+        margin: 0 4.5px !important;
+    }
+    .th-header.header-layout3 .main-menu > ul > li > a {
+        font-size: 12px !important;
+        padding: 24px 0 !important;
+        letter-spacing: 0 !important;
+    }
+    .th-header.header-layout3 .header-logo img,
+    .th-header.header-layout3 .header-logo-img {
+        max-height: 38px !important;
+    }
+    .th-header.header-layout3 .header-button {
+        gap: 5px !important;
+    }
+    .th-header.header-layout3 .header-button .icon-btn {
+        width: 35px !important;
+        height: 35px !important;
+        line-height: 33px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* 5. Submenu dropdown styling preservation */
+.th-header.header-layout3 .main-menu ul.sub-menu {
+    z-index: 9999 !important;
+}
+.th-header.header-layout3 .main-menu ul.sub-menu li a {
+    font-size: 14px !important;
+    line-height: 24px !important;
+    padding: 9px 18px !important;
+    white-space: nowrap !important;
+}
+
+/* 6. Mobile header (< 992px) */
+@media (max-width: 991px) {
+    .th-header.header-layout3 .header-logo img,
+    .th-header.header-layout3 .header-logo-img {
+        max-height: 44px !important;
+    }
+    .th-header.header-layout3 .menu-area {
+        padding: 12px 0 !important;
+    }
+    .th-header.header-layout3 .header-button {
+        gap: 8px !important;
+    }
+}
+
+/* =========================================================
+   FOOTER DARK MODE VISIBILITY FIX (OPENING HOURS & FOLLOW US)
+   ========================================================= */
+
+/* Opening Hours Heading in Footer */
+.footer-wrapper .office-hour .title,
+.footer-wrapper .office-hour h4,
+.footer-wrapper .office-hour h4.title,
+body:not(.light-mode) .footer-wrapper .office-hour .title,
+body:not(.light-mode) .footer-wrapper .office-hour h4 {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* Follow Us Heading in Footer & Side Drawer */
+.footer-wrapper .social-title,
+.footer-wrapper .th-social-wrapper .social-title,
+.footer-wrapper h6.social-title,
+.sidemenu-content .social-title,
+body:not(.light-mode) .footer-wrapper .social-title,
+body:not(.light-mode) .footer-wrapper .th-social-wrapper .social-title,
+body:not(.light-mode) .sidemenu-content .social-title {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-bottom: 12px !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* Opening Hours Details in Dark Mode */
+body:not(.light-mode) .footer-wrapper .office-hour-details div {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Light Mode Overrides (Dark readable text in light mode) */
+body.light-mode .footer-wrapper .office-hour .title,
+body.light-mode .footer-wrapper .office-hour h4,
+body.light-mode .footer-wrapper .social-title,
+body.light-mode .footer-wrapper .th-social-wrapper .social-title,
+body.light-mode .sidemenu-content .social-title {
+    color: #161921 !important;
+}
+
+/* =========================================================
+   FOOTER SOCIAL ICONS - DARK & LIGHT MODE VISIBILITY & HOVER
+   ========================================================= */
+
+/* Base & Dark Mode */
+.footer-wrapper .footer-social-icon,
+.footer-wrapper .footer-social-links a,
+.footer-wrapper .th-social-wrapper a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.footer-wrapper .footer-social-icon i,
+.footer-wrapper .footer-social-links a i {
+    color: inherit !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Hover Effect in Dark Mode */
+.footer-wrapper .footer-social-icon:hover,
+.footer-wrapper .footer-social-links a:hover,
+.footer-wrapper .th-social-wrapper a:hover {
+    background: linear-gradient(135deg, #eb0029 0%, #6b2ae6 100%) !important;
+    background-color: #eb0029 !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.08) !important;
+    box-shadow: 0 8px 20px rgba(235, 0, 41, 0.45) !important;
+}
+
+.footer-wrapper .footer-social-icon:hover i,
+.footer-wrapper .footer-social-links a:hover i {
+    transform: scale(1.1) !important;
+    color: #ffffff !important;
+}
+
+/* Light Mode Overrides */
+body.light-mode .footer-wrapper .footer-social-icon,
+body.light-mode .footer-wrapper .footer-social-links a,
+body.light-mode .footer-wrapper .th-social-wrapper a {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .footer-wrapper .footer-social-icon:hover,
+body.light-mode .footer-wrapper .footer-social-links a:hover,
+body.light-mode .footer-wrapper .th-social-wrapper a:hover {
+    background: linear-gradient(135deg, #eb0029 0%, #6b2ae6 100%) !important;
+    background-color: #eb0029 !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(107, 42, 230, 0.35) !important;
+    transform: translateY(-3px) scale(1.08) !important;
+}
+
+body.light-mode .footer-wrapper .footer-social-icon:hover i,
+body.light-mode .footer-wrapper .footer-social-links a:hover i {
+    color: #ffffff !important;
+}
+
+
+
 
 
 
