@@ -871,18 +871,80 @@ body.light-mode td {
     border-color: #e2e8f0 !important;
 }
 
-/* 11. Buttons in Light Mode */
+/* 11. Buttons in Light Mode & Universal Defaults */
+body.light-mode .th-btn.blue-btn {
+    background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 6px 20px rgba(107, 42, 230, 0.35) !important;
+}
+
+body.light-mode .th-btn.blue-btn:hover {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-2px) !important;
+}
+
+body.light-mode .th-btn.blue-btn i {
+    color: #ffffff !important;
+    transition: color 0.3s ease !important;
+}
+
+body.light-mode .th-btn.blue-btn:hover i {
+    color: #161921 !important;
+}
+
 body.light-mode .th-btn.white-btn {
     background-color: #ffffff !important;
     color: #161921 !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
-    border: 1px solid #cbd5e1 !important;
+    border: 1.5px solid #cbd5e1 !important;
 }
 
 body.light-mode .th-btn.white-btn:hover {
+    background: #eb0029 !important;
     background-color: #eb0029 !important;
-    color: #000000 !important;
+    color: #ffffff !important;
     border-color: #eb0029 !important;
+    box-shadow: 0 8px 25px rgba(235, 0, 41, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+body.light-mode .th-btn.white-btn i {
+    transition: color 0.3s ease !important;
+}
+
+body.light-mode .th-btn.white-btn:hover i {
+    color: #ffffff !important;
+}
+
+/* Universal Red Buttons (e.g. Call button in service trial boxes) */
+.th-btn.red-btn {
+    background: #eb0029 !important;
+    color: #ffffff !important;
+    border: 1px solid #eb0029 !important;
+    box-shadow: 0 6px 20px rgba(235, 0, 41, 0.35) !important;
+}
+
+.th-btn.red-btn:hover {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+.th-btn.red-btn i {
+    color: #ffffff !important;
+    transition: color 0.3s ease !important;
+}
+
+.th-btn.red-btn:hover i {
+    color: #161921 !important;
 }
 
 /* Service Card Buttons & Blog "Learn More" / "Read More" (Fixes Invisible White Text) */
@@ -988,6 +1050,108 @@ body.light-mode .th-team .team-social a:hover {
     color: #eb0029 !important;
 }
 
+/* =========================================================
+   13. CTA Banner & Buttons (Section 8) - Dark & Light Modes
+   Styled to match Section 5 (5-Days-5-Variation) Button Hover
+   ========================================================= */
+
+/* Eliminate interfering pseudo-elements that create white-on-white text masking on hover across all buttons */
+.th-btn:before,
+.th-btn:after,
+.th-btn:hover:before,
+.th-btn:hover:after,
+.th-btn.active:before,
+.th-btn.active:after,
+.th-btn:hover::before,
+.th-btn:hover::after,
+.th-btn.active::before,
+.th-btn.active::after {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Base CTA Button Styling (Universal / Dark Mode Default) */
+.cta-area-three .cta-btn2 .th-btn,
+.cta-btn2 .th-btn {
+    position: relative !important;
+    z-index: 2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.35s ease !important;
+    text-decoration: none !important;
+}
+
+/* Call Button (Dark Mode) - matches Explore Details */
+.cta-area-three .cta-btn2 .th-btn.blue-btn,
+.cta-btn2 .th-btn.blue-btn {
+    background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 6px 20px rgba(107, 42, 230, 0.4) !important;
+}
+
+.cta-area-three .cta-btn2 .th-btn.blue-btn:hover,
+.cta-btn2 .th-btn.blue-btn:hover {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+}
+
+.cta-area-three .cta-btn2 .th-btn.blue-btn i,
+.cta-btn2 .th-btn.blue-btn i {
+    color: #ffffff !important;
+    margin-right: 8px !important;
+}
+
+.cta-area-three .cta-btn2 .th-btn.blue-btn:hover i,
+.cta-btn2 .th-btn.blue-btn:hover i {
+    color: #161921 !important;
+    margin-right: 8px !important;
+}
+
+/* WhatsApp Button (Dark Mode) - matches Apply Now */
+.cta-area-three .cta-btn2 .th-btn.white-btn,
+.cta-btn2 .th-btn.white-btn {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cta-area-three .cta-btn2 .th-btn.white-btn i,
+.cta-btn2 .th-btn.white-btn i {
+    color: #25D366 !important;
+    margin-right: 8px !important;
+    transition: color 0.3s ease !important;
+}
+
+.cta-area-three .cta-btn2 .th-btn.white-btn:hover,
+.cta-btn2 .th-btn.white-btn:hover {
+    background: #eb0029 !important;
+    background-color: #eb0029 !important;
+    border-color: #eb0029 !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(235, 0, 41, 0.45) !important;
+    transform: translateY(-2px) !important;
+}
+
+.cta-area-three .cta-btn2 .th-btn.white-btn:hover i,
+.cta-btn2 .th-btn.white-btn:hover i {
+    color: #ffffff !important;
+}
+
 /* 13. CTA Banner in Light Mode (Section 8) - Fully Light Mode */
 body.light-mode .cta-area-three {
     background: #ffffff !important;
@@ -1015,27 +1179,63 @@ body.light-mode .cta-area-three p {
     color: #525960 !important;
 }
 
-body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn {
+/* Call Button (Light Mode) - matches Explore Details in 5-Days section */
+body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn,
+body.light-mode .cta-btn2 .th-btn.blue-btn {
     background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
     color: #ffffff !important;
+    border: none !important;
     box-shadow: 0 6px 20px rgba(107, 42, 230, 0.35) !important;
 }
 
-body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn:hover {
-    background: linear-gradient(135deg, #EB0029 0%, #b80020 100%) !important;
-    color: #ffffff !important;
-}
-
-body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn {
+body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn:hover,
+body.light-mode .cta-btn2 .th-btn.blue-btn:hover {
+    background: #ffffff !important;
     background-color: #ffffff !important;
     color: #161921 !important;
     border: 1px solid #cbd5e1 !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-2px) !important;
 }
 
-body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn:hover {
-    background-color: #25D366 !important;
-    border-color: #25D366 !important;
+body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn i,
+body.light-mode .cta-btn2 .th-btn.blue-btn i {
+    color: #ffffff !important;
+    margin-right: 8px !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.blue-btn:hover i,
+body.light-mode .cta-btn2 .th-btn.blue-btn:hover i {
+    color: #161921 !important;
+}
+
+/* WhatsApp Button (Light Mode) - matches Apply Now in 5-Days section */
+body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn,
+body.light-mode .cta-btn2 .th-btn.white-btn {
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1.5px solid #cbd5e1 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn i,
+body.light-mode .cta-btn2 .th-btn.white-btn i {
+    color: #25D366 !important;
+    margin-right: 8px !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn:hover,
+body.light-mode .cta-btn2 .th-btn.white-btn:hover {
+    background: #eb0029 !important;
+    background-color: #eb0029 !important;
+    border-color: #eb0029 !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(235, 0, 41, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+body.light-mode .cta-area-three .cta-btn2 .th-btn.white-btn:hover i,
+body.light-mode .cta-btn2 .th-btn.white-btn:hover i {
     color: #ffffff !important;
 }
 
@@ -1785,28 +1985,125 @@ body.light-mode .founder-spotlight .badge {
     color: #ffffff !important;
 }
 
-body.light-mode .founder-spotlight .th-btn.blue-btn {
-    background: #6b2ae6 !important;
+/* Founder Spotlight Buttons (Universal / Dark Mode Default) */
+.founder-spotlight .th-btn {
+    position: relative !important;
+    z-index: 2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.35s ease !important;
+    text-decoration: none !important;
+}
+
+.founder-spotlight .th-btn.blue-btn {
+    background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
     color: #ffffff !important;
-    border-color: #6b2ae6 !important;
+    border: none !important;
+    box-shadow: 0 6px 20px rgba(107, 42, 230, 0.4) !important;
+}
+
+.founder-spotlight .th-btn.blue-btn:hover {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+}
+
+.founder-spotlight .th-btn.blue-btn i {
+    color: #ffffff !important;
+    margin-right: 8px !important;
+    transition: color 0.3s ease !important;
+}
+
+.founder-spotlight .th-btn.blue-btn:hover i {
+    color: #161921 !important;
+}
+
+.founder-spotlight .th-btn.white-btn {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.founder-spotlight .th-btn.white-btn i {
+    color: #ffffff !important;
+    margin-right: 8px !important;
+    transition: color 0.3s ease !important;
+}
+
+.founder-spotlight .th-btn.white-btn:hover {
+    background: #eb0029 !important;
+    background-color: #eb0029 !important;
+    border-color: #eb0029 !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(235, 0, 41, 0.45) !important;
+    transform: translateY(-2px) !important;
+}
+
+.founder-spotlight .th-btn.white-btn:hover i {
+    color: #ffffff !important;
+}
+
+/* Founder Spotlight Buttons (Light Mode) */
+body.light-mode .founder-spotlight .th-btn.blue-btn {
+    background: linear-gradient(135deg, #6B2AE6 0%, #4e19b4 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 6px 20px rgba(107, 42, 230, 0.35) !important;
 }
 
 body.light-mode .founder-spotlight .th-btn.blue-btn:hover {
-    background: #eb0029 !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #161921 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-2px) !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.blue-btn i {
     color: #ffffff !important;
-    border-color: #eb0029 !important;
+    margin-right: 8px !important;
+    transition: color 0.3s ease !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.blue-btn:hover i {
+    color: #161921 !important;
 }
 
 body.light-mode .founder-spotlight .th-btn.white-btn {
-    background-color: #f8fafc !important;
+    background-color: #ffffff !important;
     color: #161921 !important;
-    border: 1px solid #cbd5e1 !important;
+    border: 1.5px solid #cbd5e1 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.white-btn i {
+    color: #161921 !important;
+    margin-right: 8px !important;
+    transition: color 0.3s ease !important;
 }
 
 body.light-mode .founder-spotlight .th-btn.white-btn:hover {
-    background-color: #6b2ae6 !important;
+    background: #eb0029 !important;
+    background-color: #eb0029 !important;
+    border-color: #eb0029 !important;
     color: #ffffff !important;
-    border-color: #6b2ae6 !important;
+    box-shadow: 0 8px 25px rgba(235, 0, 41, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+body.light-mode .founder-spotlight .th-btn.white-btn:hover i {
+    color: #ffffff !important;
 }
 
 /* Faculty Cards Grid in Light Mode */
@@ -1880,6 +2177,9 @@ body.light-mode [style*="linear-gradient(135deg, rgb(107, 42, 230)"] .text-white
     color: #ffffff !important;
 }
 
+.kosmic-gradient-cta .th-btn.white-btn,
+[style*="linear-gradient(135deg, #6B2AE6"] .th-btn.white-btn,
+[style*="linear-gradient(135deg, #6b2ae6"] .th-btn.white-btn,
 body.light-mode .kosmic-gradient-cta .th-btn.white-btn,
 body.light-mode [style*="linear-gradient(135deg, #6B2AE6"] .th-btn.white-btn,
 body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] .th-btn.white-btn {
@@ -1887,14 +2187,20 @@ body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] .th-btn.white-btn {
     color: #161921 !important;
     border: none !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.35s ease !important;
 }
 
+.kosmic-gradient-cta .th-btn.white-btn:hover,
+[style*="linear-gradient(135deg, #6B2AE6"] .th-btn.white-btn:hover,
+[style*="linear-gradient(135deg, #6b2ae6"] .th-btn.white-btn:hover,
 body.light-mode .kosmic-gradient-cta .th-btn.white-btn:hover,
 body.light-mode [style*="linear-gradient(135deg, #6B2AE6"] .th-btn.white-btn:hover,
 body.light-mode [style*="linear-gradient(135deg, #6b2ae6"] .th-btn.white-btn:hover {
     background-color: #161921 !important;
     color: #ffffff !important;
     border: none !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-2px) !important;
 }
 
 /* ---------------------------------------------------------

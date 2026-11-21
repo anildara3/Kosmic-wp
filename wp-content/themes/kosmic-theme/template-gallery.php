@@ -135,7 +135,7 @@ $contact_url = kosmic_page_url('contact-us', '/contact');
         <div class="kosmic-gradient-cta" style="background: linear-gradient(135deg, #6B2AE6 0%, #EB0029 100%); border-radius: 20px; padding: 45px 30px; text-align: center; color: #ffffff;">
             <h2 class="text-white mb-3" style="font-size: 32px; font-weight: 800;">Want Your Child or Yourself on Our Next Stage Showcase?</h2>
             <p class="mb-4 mx-auto" style="max-width: 600px; font-size: 16px; opacity: 0.95;">Visit our Padmarao Nagar or Shivam Road studios for a free trial class and batch placement test.</p>
-            <a href="<?php echo esc_url($contact_url); ?>" class="th-btn white-btn" style="color: #161921 !important; font-weight: 700; padding: 16px 36px;">Book Free Trial Demo Now</a>
+            <a href="<?php echo esc_url($contact_url); ?>" class="th-btn white-btn" style="font-weight: 700; padding: 16px 36px;">Book Free Trial Demo Now</a>
         </div>
     </div>
 </div>
