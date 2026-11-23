@@ -199,16 +199,16 @@ $logo_url = $custom_logo_id ? wp_get_attachment_image_url($custom_logo_id, 'full
         <header class="th-header header-layout3 header-absolute">
             <div class="sticky-wrapper">
                 <div class="menu-area">
-                    <div class="container">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-auto">
+                    <div class="container header-container">
+                        <div class="row align-items-center justify-content-between flex-nowrap">
+                            <div class="col-auto header-col-logo flex-shrink-0">
                                 <div class="header-logo">
                                     <a href="<?php echo esc_url(home_url('/')); ?>">
-                                        <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>" style="max-height: 52px; width: auto;">
+                                        <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>" class="header-logo-img" style="max-height: 52px; width: auto;">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-auto header-col-menu flex-shrink-1 text-center">
                                 <nav class="main-menu d-none d-lg-inline-block">
                                     <?php
                                     if (has_nav_menu('primary_menu')) {
@@ -235,7 +235,7 @@ $logo_url = $custom_logo_id ? wp_get_attachment_image_url($custom_logo_id, 'full
                                     <?php } ?>
                                 </nav>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-auto header-col-buttons flex-shrink-0">
                                 <div class="header-button">
                                     <button type="button" class="icon-btn searchBoxToggler" title="<?php esc_attr_e('Search', 'kosmic'); ?>">
                                         <i class="fal fa-search"></i>

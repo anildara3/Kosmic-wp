@@ -36,14 +36,14 @@ $services_url = kosmic_page_url('services-programs', '/services');
                                         <?php echo esc_html($about_txt); ?>
                                     </p>
                                     <div class="office-hour mb-4">
-                                        <h4 class="title mb-2"><?php esc_html_e('Opening Hours:', 'kosmic'); ?></h4>
+                                        <h4 class="title mb-2 text-white"><?php esc_html_e('Opening Hours:', 'kosmic'); ?></h4>
                                         <div class="office-hour-details">
                                             <div><?php echo esc_html($hours_w); ?></div>
                                             <div><?php echo esc_html($hours_s); ?></div>
                                         </div>
                                     </div>
                                     <div class="th-social-wrapper">
-                                        <h6 class="social-title mb-3"><?php esc_html_e('Follow Us:', 'kosmic'); ?></h6>
+                                        <h6 class="social-title mb-3 text-white"><?php esc_html_e('Follow Us:', 'kosmic'); ?></h6>
                                         <div class="d-flex align-items-center gap-3 footer-social-links">
                                             <a href="<?php echo esc_url(kosmic_get_option('social_facebook')); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
                                             <a href="<?php echo esc_url(kosmic_get_option('social_instagram')); ?>" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
